@@ -1,0 +1,20 @@
+# Site settings
+
+title: John McKim
+email: johncmckim@gmail.com
+
+description: >
+  Occasional writings
+baseurl: ""
+url: "http://johncmckim.me"
+
+twitter_username:     johncmckim
+github_username:      johncmckim
+stackoverflow_username: 937577/john-mckim
+linkedin_username:    johncmckim
+#google_plus_username
+#facebook_username:    johncmckim
+#dribbble_username:    example
+
+# Build settings
+markdown: kramdown
