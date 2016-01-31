@@ -1,0 +1,17 @@
+{% if include.post %}
+<article class="{% cycle '6u', '6u$' %} 12u(small)">
+    <header>
+        <h2><a href="{{ include.post.url }}">{{ include.post.title }}</a></h2>
+    </header>
+    <section>
+        {{ include.post.excerpt }}
+    </section>
+    <footer>
+        <ul class="actions">
+            <li><a href="{{ include.post.url }}" class="button">Read More</a></li>
+        </ul>
+    </footer>
+</article>
+{% else %}
+<p>Oh dear, there's no post here.</p>
+{% endif %}

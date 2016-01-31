@@ -1,0 +1,15 @@
+{% if include.post %}
+<header class="major">
+    <h2><a href="{{ include.post.url }}">{{ include.post.title }}</a></h2>
+    <p class="post-meta">
+      {{ include.post.date | date: "%b %-d, %Y" }}
+      {% if include.post.author %} • {{ include.post.author }}{% endif %}
+      {% if include.meta %} • {{ include.meta }}{% endif %}
+    </p>
+</header>
+<section class="post-content">
+    {{ include.post.content }}
+</section>
+{% else %}
+<p>Oh dear, there's no post here.</p>
+{% endif %}

@@ -1,0 +1,10 @@
+@import "lists";
+
+.nav {
+  @extend %horizontal-list;
+
+  a {
+    color: $color-accent2-fg-bold;
+    border-bottom: none;
+  }
+}

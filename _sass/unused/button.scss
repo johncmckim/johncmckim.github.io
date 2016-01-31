@@ -1,0 +1,81 @@
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+	@include vendor-property('appearance', 'none');
+	@include vendor-property('transition', 'background-color #{$duration-transition} ease-in-out, color #{$duration-transition} ease-in-out, border-color #{$duration-transition} ease-in-out');
+	background-color: transparent;
+	border-radius: $size-border-radius;
+	border: solid 3px $color-border;
+	color: $color-fg-bold !important;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: $font-weight-bold;
+	height: 3.15em;
+	height: calc(2.75em + 6px);
+	line-height: 2.75em;
+	min-width: 10em;
+	padding: 0 1.5em;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+
+	&:hover {
+		border-color: $color-accent-bg;
+		color: $color-accent-bg !important;
+	}
+
+	&:active {
+		background-color: transparentize($color-accent-bg, 0.9);
+		border-color: $color-accent-bg;
+		color: $color-accent-bg !important;
+	}
+
+	&.icon {
+		padding-left: 1.35em;
+
+		&:before {
+			margin-right: 0.5em;
+		}
+	}
+
+	&.fit {
+		display: block;
+		margin: 0 0 ($size-element-margin * 0.5) 0;
+		min-width: 0;
+		width: 100%;
+	}
+
+	&.small {
+		font-size: 0.8em;
+	}
+
+	&.big {
+		font-size: 1.35em;
+	}
+
+	&.special {
+		background-color: $color-accent-bg;
+		border-color: $color-accent-bg;
+		color: $color-accent-fg-bold !important;
+
+		&:hover {
+			background-color: lighten($color-accent-bg, 5);
+			border-color: lighten($color-accent-bg, 5);
+		}
+
+		&:active {
+			background-color: darken($color-accent-bg, 5);
+			border-color: darken($color-accent-bg, 5);
+		}
+	}
+
+	&.disabled,
+	&:disabled {
+		background-color: $color-border2-bg !important;
+		border-color: $color-border2-bg !important;
+		color: $color-fg-light !important;
+		cursor: default;
+	}
+}

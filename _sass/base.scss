@@ -1,0 +1,70 @@
+
+@import 'vars';
+@import 'mixins';
+
+body {
+	background: $color-bg;
+
+	&.is-loading {
+		*, *:before, *:after {
+			@include vendor-property('animation', 'none !important');
+			@include vendor-property('transition', 'none !important');
+		}
+	}
+}
+
+
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}
+
+/* Section/Article */
+
+section, article {
+	&.special {
+		text-align: center;
+	}
+}
+
+header {
+	p {
+		color: $color-fg-light;
+		position: relative;
+		margin: 0 0 ($size-element-margin * 0.75) 0;
+	}
+
+	h2 + p {
+		font-size: 1.25em;
+		margin-top: ($size-element-margin * -0.5);
+		line-height: 1.5em;
+	}
+
+	h3 + p {
+		font-size: 1.1em;
+		margin-top: ($size-element-margin * -0.4);
+		line-height: 1.5em;
+	}
+
+	h4 + p,
+	h5 + p,
+	h6 + p {
+		font-size: 0.9em;
+		margin-top: ($size-element-margin * -0.3);
+		line-height: 1.5em;
+	}
+
+	&.major {
+		h2 {
+			font-size: 2em;
+		}
+	}
+}

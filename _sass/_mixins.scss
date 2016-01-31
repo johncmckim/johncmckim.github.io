@@ -1,16 +1,16 @@
-@mixin vendor-property($property, $value) { 
+@mixin vendor-property($property, $value) {
     @each $vendor in ('-moz-', '-webkit-', '-o-', '-ms-', '') {
         #{$vendor}#{$property}: #{$value};
     }
 }
 
-@mixin vendor-value($property, $value) { 
+@mixin vendor-value($property, $value) {
     @each $vendor in ('-moz-', '-webkit-', '-o-', '-ms-', '') {
         #{$property}: #{$vendor}#{$value};
     }
 }
 
-@mixin vendor($property, $value) { 
+@mixin vendor($property, $value) {
     @each $vendor in ('-moz-', '-webkit-', '-o-', '-ms-', '') {
         #{$vendor}#{$property}: #{$vendor}#{$value};
     }
@@ -38,4 +38,25 @@
 		font-weight: normal;
 		text-transform: none !important;
 	}
+}
+
+%horizontal-list {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    display: inline-block;
+    padding: 0 1em 0 0;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    .icon {
+      &:before {
+        font-size: 1.5em;
+      }
+    }
+  }
 }

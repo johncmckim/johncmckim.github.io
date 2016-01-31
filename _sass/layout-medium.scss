@@ -1,0 +1,116 @@
+
+@import 'vars';
+@import 'mixins';
+
+$size-header-width:		35%;
+$size-header-pad:		4em;
+
+@media (min-width: 768px) {
+
+  .header {
+		padding: ($size-header-pad * 2) $size-header-pad 0 $size-element-margin;
+
+    background-color:    $color-accent2-bg;
+    background-attachment:  scroll, fixed;
+    background-image:    url('images/overlay.png'),      url('../images/bg_p.jpeg');
+    background-position:  top left,              top left;
+    background-repeat:    repeat,                no-repeat;
+    background-size:    auto,                auto 100%;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    text-align: right;
+    top: 0;
+    width: $size-header-width;
+
+    .header-content {
+
+      strong, b {
+        color: $color-accent2-fg-bold;
+      }
+
+      h2, h3, h4, h5, h6 {
+        color: $color-accent2-fg-bold;
+      }
+
+      h1 {
+        color: $color-accent2-fg;
+        font-size: 1em;
+        line-height: 1.75em;
+        margin: 0;
+      }
+
+      .image.avatar {
+        margin: 0 0 ($size-element-margin * 0.5) 0;
+        width: 6.25em;
+      }
+    }
+  }
+
+  .footer {
+    background: transparent;
+    bottom: 0;
+    left: 0;
+    padding: 0 $size-header-pad $size-element-margin $size-element-margin;
+    position: fixed;
+    text-align: right;
+
+    width: $size-header-width;
+
+    .footer-content {
+      font-size: 1em;
+      .icons {
+        margin: ($size-element-margin * 0.5) 0 0 0;
+
+        a {
+          color: $color-accent2-fg-light;
+        }
+      }
+
+      .copyright {
+        color: $color-accent2-fg-light;
+        font-size: 0.8em;
+        list-style: none;
+        margin: ($size-element-margin * 0.5) 0 0 0;
+        padding: 0;
+
+        li {
+          border-left: solid 1px $color-accent2-border;
+          display: inline-block;
+          line-height: 1em;
+          margin-left: 0.75em;
+          padding-left: 0.75em;
+
+          &:first-child {
+            border-left: 0;
+            margin-left: 0;
+            padding-left: 0;
+          }
+
+          a {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    margin-left: $size-header-width;
+    max-width: 50em + $size-header-pad;
+    padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
+    width: calc(100% - #{$size-header-width});
+
+    > section {
+      border-top: solid 2px $color-border;
+      margin: $size-header-pad 0 0 0;
+      padding: $size-header-pad 0 0 0;
+
+      &:first-child {
+        border-top: 0;
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div id="main">
+<div class="main-content">
     <article>
         <header class="major">
             <h2 class="post-title">{{ page.title }}</h2>
@@ -11,11 +11,11 @@ layout: default
         <section>
             {{ content }}
         </section>
-        
+
         <footer>
             <div class="row">
             {% if page.previous %}
-            
+
                 <article class="{% cycle '6u', '6u$' %} 12u(small) excerpt">
                     <header>
                         <h2><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h2>
@@ -30,9 +30,9 @@ layout: default
                     </footer>
                 </article>
             {% endif %}
-            
+
             {% if page.next %}
-            
+
                 <article class="{% cycle '6u', '6u$' %} 12u(small) excerpt f-right">
                     <header>
                         <h2><a href="{{ page.next.url }}">{{ page.next.title }}</a></h2>
