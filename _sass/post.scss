@@ -1,21 +1,28 @@
 
+@mixin post-margins($post-margin-base) {
+  h1, h2, h3, h4, h5, h6 {
+    margin: $post-margin-base 0 0 0;
+  }
+
+  p {
+    margin: 0 0 ($post-margin-base) 0;
+  }
+
+  blockquote {
+    margin: ($post-margin-base) 0;
+  }
+
+  ul {
+    margin: 0 0 ($post-margin-base / 2) ($post-margin-base);
+    li {
+      margin: 0 0 0 0;
+    }
+  }
+}
+
 .post {
   .post-content {
-    h1, h2, h3, h4, h5, h6 {
-      margin: 1em 0 0 0;
-    }
-
-    p {
-      margin: 0 0 0.25em 0;
-    }
-
-    blockquote {
-      margin: 0.5em 0;
-    }
-
-    ul, li {
-      margin: 0 0 0.25em 1em;
-    }
+    @include post-margins(1em);
 
     hr {
       height: 1em;
@@ -34,6 +41,10 @@
         position: relative;
         letter-spacing: 0.5em;
       }
+    }
+
+    @include desktop {
+      @include post-margins(1.5em);
     }
   }
 }

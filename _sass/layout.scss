@@ -60,9 +60,15 @@
 
   .icons {
     margin: 0 0 ($size-element-margin * 0.5) 0;
+
+    a {
+      color: $color-accent2-fg-light;
+    }
   }
 
   .copyright {
+    color: $color-accent2-fg-light;
+    
     li {
       border-left-width: 0;
       display: block;
@@ -74,5 +80,5 @@
 }
 
 .main {
-  padding: 1em;
+  padding: 2.5em 4.5em;
 }

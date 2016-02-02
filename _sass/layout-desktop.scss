@@ -5,7 +5,8 @@
 $size-header-width:		35%;
 $size-header-pad:		4em;
 
-@media (min-width: 768px) {
+body {
+@include desktop {
 
   .header {
 		padding: ($size-header-pad * 2) $size-header-pad 0 $size-element-margin;
@@ -61,14 +62,9 @@ $size-header-pad:		4em;
       font-size: 1em;
       .icons {
         margin: ($size-element-margin * 0.5) 0 0 0;
-
-        a {
-          color: $color-accent2-fg-light;
-        }
       }
 
       .copyright {
-        color: $color-accent2-fg-light;
         font-size: 0.8em;
         list-style: none;
         margin: ($size-element-margin * 0.5) 0 0 0;
@@ -113,4 +109,5 @@ $size-header-pad:		4em;
       }
     }
   }
+}
 }
