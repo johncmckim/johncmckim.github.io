@@ -3,7 +3,7 @@
 @import 'mixins';
 
 body, input, select, textarea {
-	color: $color-fg;
+	color: $color-black;
 	font-family: $font-family;
 	font-size: 12pt;
 	font-weight: $font-weight;
@@ -37,7 +37,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: $color-fg-bold;
+	color: $color-gray;
 	font-weight: $font-weight-bold;
 	line-height: 1em;
 	margin: 0 0 ($size-element-margin * 0.5) 0;
@@ -49,6 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+	color: $color-black;
 	font-size: 2em;
 	line-height: 1.5em;
 }
