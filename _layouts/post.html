@@ -7,18 +7,15 @@ layout: default
             <h1 class="post-title">{{ page.title }}</h1>
             <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
         </header>
-
         <section>
             {{ content }}
         </section>
-
         <footer>
             <div class="row">
             {% if page.previous %}
-
-                <article class="{% cycle '6u', '6u$' %} 12u(small) excerpt">
+                <article class="post-excerpt">
                     <header>
-                        <h2><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h2>
+                        <h1><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h1>
                     </header>
                     <section>
                         {{ page.previous.excerpt }}
@@ -30,12 +27,10 @@ layout: default
                     </footer>
                 </article>
             {% endif %}
-
             {% if page.next %}
-
-                <article class="{% cycle '6u', '6u$' %} 12u(small) excerpt f-right">
+                <article class="post-excerpt post-exceprt-right">
                     <header>
-                        <h2><a href="{{ page.next.url }}">{{ page.next.title }}</a></h2>
+                        <h1><a href="{{ page.next.url }}">{{ page.next.title }}</a></h1>
                     </header>
                     <section>
                         {{ page.next.excerpt | markdownify }}

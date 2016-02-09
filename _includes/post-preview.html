@@ -1,7 +1,7 @@
 {% if include.post %}
 <article class="{% cycle '6u', '6u$' %} 12u(small)">
     <header>
-        <h2><a href="{{ include.post.url }}">{{ include.post.title }}</a></h2>
+        <h1><a href="{{ include.post.url }}">{{ include.post.title }}</a></h1>
     </header>
     <section>
         {{ include.post.excerpt }}
