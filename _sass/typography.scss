@@ -5,9 +5,8 @@
 body, input, select, textarea {
 	color: $color-black;
 	font-family: $font-family;
-	font-size: 12pt;
 	font-weight: $font-weight;
-	line-height: 1.75em;
+	line-height: 1.75rem;
 }
 
 a {
@@ -39,7 +38,7 @@ p {
 h1, h2, h3, h4, h5, h6 {
 	color: $color-gray;
 	font-weight: $font-weight-bold;
-	line-height: 1em;
+	line-height: 1rem;
 	margin: 0 0 ($size-element-margin * 0.5) 0;
 
 	a {
@@ -50,45 +49,49 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	color: $color-black;
-	font-size: 2em;
-	line-height: 1.5em;
+	font-size: 2rem;
+	line-height: 1.5rem;
 }
 
 h2 {
-	font-size: 1.5em;
-	line-height: 1.5em;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
 }
 
 h3 {
-	font-size: 1.25em;
-	line-height: 1.5em;
+	font-size: 1.25rem;
+	line-height: 1.5rem;
 }
 
 h4 {
-	font-size: 1.1em;
-	line-height: 1.5em;
+	font-size: 1.1rem;
+	line-height: 1.5rem;
 }
 
 h5 {
-	font-size: 0.9em;
-	line-height: 1.5em;
+	font-size: 0.9rem;
+	line-height: 1.5rem;
 }
 
 h6 {
-	font-size: 0.7em;
-	line-height: 1.5em;
+	font-size: 0.7rem;
+	line-height: 1.5rem;
+}
+
+p {
+	font-size: 1rem;
 }
 
 sub {
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	position: relative;
-	top: 0.5em;
+	top: 0.5rem;
 }
 
 sup {
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	position: relative;
-	top: -0.5em;
+	top: -0.5rem;
 }
 
 hr {
@@ -107,7 +110,11 @@ blockquote {
 	border-left: solid 6px $color-border;
 	font-style: italic;
 	margin: 0 0 $size-element-margin 0;
-	padding: 0.5em 0 0.5em 1.5em;
+	padding: 0.5rem 0 0.5rem 1.5rem;
+}
+
+pre, code {
+	font-size: 1.4rem;
 }
 
 code {
@@ -115,21 +122,19 @@ code {
 	border-radius: $size-border-radius;
 	border: solid 2px $color-border;
 	font-family: $font-family-fixed;
-	font-size: 0.9em;
-	margin: 0 0.25em;
-	padding: 0.25em 0.65em;
+	margin: 0 0.25rem;
+	padding: 0.25rem 0.65rem;
 }
 
 pre {
 	-webkit-overflow-scrolling: touch;
 	font-family: $font-family-fixed;
-	font-size: 0.9em;
 	margin: 0 0 $size-element-margin 0;
 
 	code {
 		display: block;
-		line-height: 1.75em;
-		padding: 1em 1.5em;
+		line-height: 1.75rem;
+		padding: 1rem 1.5rem;
 		overflow-x: auto;
 	}
 }

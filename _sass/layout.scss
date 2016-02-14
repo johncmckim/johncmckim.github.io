@@ -47,14 +47,14 @@ $bg-l-image-widths: 502 703 881 1000;
 
     h1 {
       color: $color-accent2-fg;
-      font-size: 1em;
-      line-height: 1.25em;
-      margin: 0 0 0 1em;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      margin: 0 0 0 1rem;
     }
 
     .image.avatar {
       margin: 0 0 ($size-element-margin * 0.5) 0;
-      width: 4em;
+      width: 4rem;
     }
   }
 }
@@ -83,7 +83,7 @@ $bg-l-image-widths: 502 703 881 1000;
     li {
       border-left-width: 0;
       display: block;
-      line-height: 2.25em;
+      line-height: 2.25rem;
       margin-left: 0;
       padding-left: 0;
     }
@@ -91,5 +91,5 @@ $bg-l-image-widths: 502 703 881 1000;
 }
 
 .main {
-  padding: 2.5em 4.5em;
+  padding: 2.5rem 4.5rem;
 }

@@ -22,29 +22,29 @@
 
 .post {
   .post-content {
-    @include post-margins(1em);
+    @include post-margins(1rem);
 
     hr {
-      height: 1em;
-      margin: 0.5em 0;
+      height: 1rem;
+      margin: 0.5rem 0;
 
       border-bottom: none;
       text-align: center;
 
-      font-size: 2em;
+      font-size: 2rem;
 
       &:before {
         content: '...';
         display: inline-block;
-        margin-left: 0.6em;
+        margin-left: 0.6rem;
         color: rgba(0,0,0,0.6);
         position: relative;
-        letter-spacing: 0.5em;
+        letter-spacing: 0.5rem;
       }
     }
 
     @include desktop {
-      @include post-margins(1.5em);
+      @include post-margins(1.5rem);
     }
   }
 }

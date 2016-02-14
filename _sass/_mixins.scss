@@ -62,7 +62,7 @@ $desktop-width: 1024px;
 
   li {
     display: inline-block;
-    padding: 0 1em 0 0;
+    padding: 0 1rem 0 0;
 
     &:last-child {
       padding-right: 0;
@@ -70,7 +70,7 @@ $desktop-width: 1024px;
 
     .icon {
       &:before {
-        font-size: 1.5em;
+        font-size: 1.5rem;
       }
     }
   }
