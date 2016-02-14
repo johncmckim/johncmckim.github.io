@@ -2,15 +2,30 @@
 @import 'vars';
 @import 'mixins';
 
+//$bg-p-image-widths: 498 682 845 975;
+$bg-l-image-widths: 502 703 881 1000;
+
+// Images
+.header, .footer {
+  background-color:    $color-accent2-bg;
+  background-attachment:  scroll;
+  background-position:  top left,            bottom center;
+  background-repeat:    repeat,              no-repeat;
+  background-size:    auto,              cover;
+  background-image: url('images/overlay.png'),   url('../images/bg_l_w_200.jpg');
+
+  @each $width in $bg-l-image-widths {
+    @include min-width( ($width + "px"))  {
+      background-image: url('images/overlay.png'), url('../images/bg_l_w_#{$width}.jpg');
+    }
+  }
+}
+
 .header {
   padding: $size-header-pad $size-header-pad ($size-header-pad * 1.5) $size-header-pad;
 
-  background-color:    $color-accent2-bg;
-  background-attachment:  scroll;
-  background-image: url('images/overlay.png'),   url('../images/bg_l.jpeg');
   background-position: top left, center center;
-  background-repeat: repeat, no-repeat;
-  background-size: auto, cover;
+
   color: $color-accent2-fg;
   text-align: center;
 
@@ -45,12 +60,8 @@
 }
 
 .footer {
-  background-attachment:  scroll;
-  background-color:    $color-accent2-bg;
-  background-image:    url('images/overlay.png'),    url('../images/bg_l.jpeg');
-  background-position:  top left,            bottom center;
-  background-repeat:    repeat,              no-repeat;
-  background-size:    auto,              cover;
+  background-position: top left, bottom center;
+
   bottom: auto;
   left: auto;
   padding: $size-header-pad $size-header-pad ($size-header-pad * 1.5) $size-header-pad;
@@ -68,7 +79,7 @@
 
   .copyright {
     color: $color-accent2-fg-light;
-    
+
     li {
       border-left-width: 0;
       display: block;
