@@ -23,7 +23,7 @@ A budget helps improve performance and prevent regressions. As you make improvem
 ## Enter Budgerigar
 Budgerigar was created to measure the performance of operations in .NET and log when the performance of the operation doesn’t meet expectations.
 
-~~~
+<pre class="blah"><code class="cs">
 var budgeter = new PerformanceBudgetter();
 
 await budgeter.RunWithBudgetAsync("some-task", 50M, async (b) => {
@@ -33,13 +33,13 @@ await budgeter.RunWithBudgetAsync("some-task", 50M, async (b) => {
           logger.Error(result.GetDetailedOutput());
       }
   });
-~~~
+</code></pre>
 
 Using Budgerigar allows the developer to filter out the noise by only logging when an operation goes over budget. This makes it easier to identify when there is a regression in performance.
 
 To identify what is causing a regression in performance, an operation can be broken down into steps.
 
-~~~
+<pre><code class="cs">
 var result = await budgetter.RunWithBudgetAsync(
   "data-processing-task",
   500.0M,
@@ -60,7 +60,7 @@ var result = await budgetter.RunWithBudgetAsync(
           logger.Error(result.GetDetailedOutput());
       }
   });
-~~~
+</code></pre>
 
 ## Practical Usage
 Performance Budgeting + Centralised Logging is a very powerful match. An application that uses Budgerigar can report performance regressions to a Centralised Logging solution. The logging system can then alert developers to the issue allowing them to quickly respond.

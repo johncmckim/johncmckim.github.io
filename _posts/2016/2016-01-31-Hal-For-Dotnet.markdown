@@ -122,6 +122,6 @@ I would like to be able to automatically generate links from routes so they do n
 passed into the `HAL()` method ([issue on Github](https://github.com/visualeyes/halcyon/issues/9)).
 There is also an issue for [a HAL response using attributes](https://github.com/visualeyes/halcyon/issues/6).
 This is not a feature I was planning on adding originally. However, I have gotten feedback requesting this
-so it is something I am considering. 
+so it is something I am considering.
 
 This package is available on [nuget](https://www.nuget.org/packages/Halcyon/) and the code is up on [GitHub](https://github.com/visualeyes/halcyon). If you have any questions [add an issue](https://github.com/visualeyes/halcyon/issues) and I'll get back to you.

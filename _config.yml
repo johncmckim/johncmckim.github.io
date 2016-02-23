@@ -2,11 +2,18 @@
 
 title: John McKim
 email: johncmckim@gmail.com
+author:
+  name: "John McKim"
+  email: johncmckim@gmail.common
+  uri: "http://johncmckim.me"
 
 description: >
   Occasional writings
+
 baseurl: ""
 url: "http://johncmckim.me"
+feed:
+  path: feed.xml
 
 twitter_username:     johncmckim
 github_username:      johncmckim
@@ -18,3 +25,6 @@ linkedin_username:    johncmckim
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-feed

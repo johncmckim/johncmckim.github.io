@@ -124,7 +124,6 @@ pre, code {
 }
 
 code {
-  background: $color-border-bg;
   border-radius: $size-border-radius;
   border: solid 2px $color-border;
   font-family: $font-family-fixed;
@@ -133,7 +132,6 @@ code {
 }
 
 pre {
-  -webkit-overflow-scrolling: touch;
   font-family: $font-family-fixed;
   margin: 0 0 $size-element-margin 0;
 
