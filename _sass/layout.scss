@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  background-color: $color-white;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-top: 3px solid $theme-color;
+}
+
+.container {
+  width: auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+#wrap {
+  padding-bottom: 50px;
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -65px;
+}
