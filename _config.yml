@@ -12,9 +12,12 @@ description: >
 
 baseurl: ""
 url: "http://johncmckim.me"
+avatar: avatar.jpeg
 feed:
   path: feed.xml
 
+blog_url:             "https://medium.com/@johncmckim"
+medium_username:      "@johncmckim"
 twitter_username:     johncmckim
 github_username:      johncmckim
 stackoverflow_username: 937577/john-mckim
