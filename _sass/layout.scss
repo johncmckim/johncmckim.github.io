@@ -1,95 +1,19 @@
-
-@import 'vars';
-@import 'mixins';
-
-//$bg-p-image-widths: 498 682 845 975;
-$bg-l-image-widths: 502 703 881 1000;
-
-// Images
-.header, .footer {
-  background-color:    $color-accent2-bg;
-  background-attachment:  scroll;
-  background-position:  top left,            bottom center;
-  background-repeat:    repeat,              no-repeat;
-  background-size:    auto,              cover;
-  background-image: url('images/overlay.png'),   url('../images/bg_l_w_200.jpg');
-
-  @each $width in $bg-l-image-widths {
-    @include min-width( ($width + "px"))  {
-      background-image: url('images/overlay.png'), url('../images/bg_l_w_#{$width}.jpg');
-    }
-  }
+html, body {
+  height: 100%;
+  background-color: $color-white;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-top: 3px solid $theme-color;
 }
 
-.header {
-  padding: $size-header-pad $size-header-pad ($size-header-pad * 1.5) $size-header-pad;
-
-  background-position: top left, center center;
-
-  color: $color-accent2-fg;
+.container {
+  width: auto;
+  max-width: 800px;
   text-align: center;
-
-  .header-content {
-
-    h1 {
-      br {
-        display: none;
-      }
-    }
-
-    strong, b {
-      color: $color-accent2-fg-bold;
-    }
-
-    h2, h3, h4, h5, h6 {
-      color: $color-accent2-fg-bold;
-    }
-
-    h1 {
-      color: $color-accent2-fg;
-      font-size: 1rem;
-      line-height: 1.25rem;
-      margin: 0 0 0 1rem;
-    }
-
-    .image.avatar {
-      margin: 0 0 ($size-element-margin * 0.5) 0;
-      width: 4rem;
-    }
-  }
 }
 
-.footer {
-  background-position: top left, bottom center;
-
-  bottom: auto;
-  left: auto;
-  padding: $size-header-pad $size-header-pad ($size-header-pad * 1.5) $size-header-pad;
-  position: relative;
-  text-align: center;
-  width: 100%;
-
-  .icons {
-    margin: 0 0 ($size-element-margin * 0.5) 0;
-
-    a {
-      color: $color-accent2-fg-light;
-    }
-  }
-
-  .copyright {
-    color: $color-accent2-fg-light;
-
-    li {
-      border-left-width: 0;
-      display: block;
-      line-height: 2.25rem;
-      margin-left: 0;
-      padding-left: 0;
-    }
-  }
-}
-
-.main {
-  padding: 2.5rem 4.5rem;
+#wrap {
+  padding-bottom: 50px;
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -65px;
 }

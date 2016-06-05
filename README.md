@@ -1,2 +1,1 @@
-# johncmckim.github.io
-My website
+# My website

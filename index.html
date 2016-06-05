@@ -1,17 +1,31 @@
 ---
-layout: default
+layout: home
 ---
-<div id="main">
-    <section class="post">
-        {% for post in site.posts limit:1 %}
-          {% include post.html post=post meta=page.meta %}
-        {% endfor %}
-    </section>
-    <section>
-        <div class="row">
-            {% for post in site.posts offset:1 %}
-              {% include post-preview.html post=post %}
-            {% endfor %}
-        </div>
-    </section>
-</div>
+
+<section id="about">
+  <div class="container">
+    <div class="avatar">
+      <img class="img-circle" src="{{ site.baseurl }}/static/img/{{ site.avatar }}" alt="Responsive image">
+    </div>
+    <div class="info">
+      <p>
+        I'm <strong>{{ site.author.name }}</strong>,<br />
+        a Full-Stack Developer, “DevOps guy”,<br />
+        occasional writer, cyclist and terrible gardner.
+      </p>
+      <p>
+         I live and work in Brisbane, Australia.
+      </p>
+      <p>
+        I write about AWS, Serverless and .NET on my <a href="{{ site.blog_url }}">blog</a>.
+      </p>
+      <p>
+        Contact me at
+        <a href="http://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a>
+        or by
+        <a href="mailto:{{ site.email }}">email</a>.
+      </p>
+    </div>
+    {% include social.html %}
+  </div>
+</section>
