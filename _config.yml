@@ -7,8 +7,12 @@ author:
   email: contact@johncmckim.me
   uri: "http://johncmckim.me"
 
+employer:
+  name: A Cloud Guru
+  uri: https://acloud.guru
+
 description: >
-  Occasional writings
+  About John McKim
 
 baseurl: ""
 url: "http://johncmckim.me"
