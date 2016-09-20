@@ -2,7 +2,6 @@
   <div class="container">
     <div id="navbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ site.baseurl }}">HOME</a></li>
         {% if site.blog_url %}
         <li>
           <a href="{{ site.blog_url }}">
@@ -10,10 +9,17 @@
           </a>
         </li>
         {% endif %}
+        {% if site.medium_username %}
+        <li>
+          <a href="https://medium.com/{{ site.medium_username }}">
+            MEDIUM
+          </a>
+        </li>
+        {% endif %}
         {% if site.github_username %}
         <li>
           <a href="https://github.com/{{ site.github_username }}">
-            PROJECTS
+            GITHUB
           </a>
         </li>
         {% endif %}

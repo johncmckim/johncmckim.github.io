@@ -5,7 +5,7 @@ email: contact@johncmckim.me
 author:
   name: "John McKim"
   email: contact@johncmckim.me
-  uri: "http://johncmckim.me"
+  uri: "https://johncmckim.me"
 
 employer:
   name: A Cloud Guru
@@ -15,12 +15,12 @@ description: >
   About John McKim
 
 baseurl: ""
-url: "http://johncmckim.me"
+url: "https://johncmckim.me"
 avatar: avatar.jpeg
 feed:
   path: feed.xml
 
-blog_url:               "https://medium.com/@johncmckim"
+blog_url:               https://blog.johncmckim.me
 medium_username:        "@johncmckim"
 twitter_username:       johncmckim
 github_username:        johncmckim

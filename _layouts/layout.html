@@ -12,9 +12,6 @@
     {% else %}
       <title>{{ site.title }}</title>
     {% endif %}
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
-    crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}static/css/style.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
@@ -22,7 +19,6 @@
   <body>
   {% include analytics.html %}
   <div id="wrap">
-    {% include header.html %}
     {{ content }}
   </div>
   {% include footer.html %}

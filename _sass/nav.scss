@@ -1,71 +1,8 @@
 
-.navbar-static-top {
-  margin-bottom: 10px;
-}
-.navbar-default {
-  background-color: $color-white;
-  border-color: $color-white;
+.navbar {
+  display: none;
 
-  .navbar-text {
-    color: $color-grey;
-  }
-  .navbar-nav {
-     > li > a {
-      color: $color-grey;
-      &:hover, &:focus {
-        color: $color-grey;
-      }
-    }
-
-    > .active > a, > .active > a:hover, > .active > a:focus {
-      color: $color-grey;
-      background-color: $color-white;
-    }
-    > .open > a, > .open > a:hover, > .open > a:focus {
-      color: $color-grey;
-      background-color: $color-white;
-    }
-
-
-    @media (max-width: 767px) {
-      .open .dropdown-menu {
-        > li > a {
-          color: $color-grey;
-          &:hover, &:focus {
-            color: $color-grey;
-          }
-        }
-        > .active > a {
-          color: $color-grey;
-          background-color: $color-white;
-          &:hover, &:focus {
-            color: $color-grey;
-            background-color: $color-white;
-          }
-        }
-      }
-
-    }
-  }
-
-  .navbar-toggle {
-    border-color: $color-white;
-    &:hover, &:focus {
-      color: $color-white;
-    }
-    .icon-bar {
-      background-color: $color-grey;
-    }
-  }
-
-  .navbar-collapse, .navbar-form {
-    border-color: $color-grey;
-  }
-
-  .navbar-link {
-    color: $color-grey;
-    &:hover {
-      color: $color-grey;
-    }
+  @include desktop {
+    display: block;
   }
 }

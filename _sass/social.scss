@@ -5,9 +5,15 @@
 }
 .social h4 {
   > a {
+    font-size: 18px;
     color: $color-black;
+
     &:hover {
       text-decoration: none;
+    }
+
+    @include desktop {
+      font-size: 24px;
     }
   }
 }
