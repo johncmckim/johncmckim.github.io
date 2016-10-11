@@ -46,3 +46,9 @@ body {
   height: auto;
   margin: 0 auto -65px;
 }
+
+.main-section {
+  @include desktop {
+    margin-top: 50px;
+  }
+}

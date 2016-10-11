@@ -1,0 +1,1358 @@
+---
+layout: slides-v3
+title: Serverless Gardens
+description: >
+  I often forget to water my plants.
+  This talk will cover how I architected a Serverless monitoring system for my garden.
+  I will dive into React + GraphQL + Lambda + DynamoDB stack that powers my garden dashboard.
+---
+<div class="theme-font-montserrat theme-color-black-orange" style="width: 100%; height: 100%;">
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 92px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h1>Serverless Gardens</h1>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 210px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>
+                            <span>IoT + Serverless</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 541px;">
+                    <div class="sl-block-content" style="z-index: 13; text-align: left;">
+                        <p>twitter.com/@johncmckim</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 490px;">
+                    <div class="sl-block-content" style="z-index: 14;">
+                        <p style="text-align:left">johncmckim.me</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 591px;">
+                    <div class="sl-block-content" style="z-index: 15; text-align: left;">
+                        <p>medium.com/@johncmckim</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 431px;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <p>Software Engineer at A Cloud Guru</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 260px; height: 260px; left: 350px; top: 70px;">
+                    <div class="sl-block-content" style="z-index: 12; border-style: solid; border-radius: 200px;">
+                        <img data-natural-width="900" data-natural-height="900" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3071078/avatar.jpg"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 350px;">
+                    <div class="sl-block-content" style="z-index: 13; font-size: 140%;">
+                        <p>John McKim</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 575px;">
+                    <div class="sl-block-content" style="z-index: 14;">
+                        <p>@johncmckim</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 505px;">
+                    <div class="sl-block-content" style="z-index: 15;">
+                        <p>Contribute to Serverless Framework</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 490px;">
+                    <div class="sl-block-content" style="z-index: 13; text-align: left; font-size: 180%;">
+                        <p style="text-align: center;">brisbanejs.acloud.guru</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 471.053px; height: 350px; left: 245px; top: 70px;">
+                    <div class="sl-block-content" style="z-index: 15;">
+                        <img data-natural-width="716" data-natural-height="532" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3048222/logo-large.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="image" style="width: 550px; height: 420.265px; left: 205px; top: 140px;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <img data-natural-width="1700" data-natural-height="1299" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3070951/serverless-usage.gif"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Serverless Framework</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 591px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <p>serverless.com</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content">
+                        <h2>Agenda</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 168px; height: auto;">
+                    <div class="sl-block-content" style="font-size: 120%; line-height: 1.56;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">What is Serverless</li>
+                            <li class="fragment" data-fragment-index="1">Why I built this project</li>
+                            <li class="fragment" data-fragment-index="2">Overall Architecture</li>
+                            <li class="fragment" data-fragment-index="3">Design of each Microservice</li>
+                            <li class="fragment" data-fragment-index="4">GraphQL + Lambda</li>
+                            <li class="fragment" data-fragment-index="5">What I learnt</li>
+                            <li class="fragment" data-fragment-index="6">Questions</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>What is Serverless?</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 695.38px; height: 490px; left: 133px; top: 169px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img style="" data-natural-width="430" data-natural-height="303" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3093747/1c0sm1.jpg"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Serverless</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>FaaS + The Herd</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 794px; height: 376.683px; left: 80px; top: 232px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img style="" data-natural-width="723" data-natural-height="343" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3093771/The_Herd__1_.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 173px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>What is Serverless?</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 336px;">
+                    <div class="sl-block-content" style="z-index: 12; line-height: 1.56; font-size: 120%;" data-has-line-height="">
+                        <p>
+                            <em>A Serverless Architecture is an event driven system that utilises </em>
+                            <a href="https://serverless.zone/abstracting-the-back-end-with-faas-e5e80e837362" target="_blank">FaaS</a>
+                            <em>&nbsp;and other fully managed services for logic and persistence.</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Why choose Serverless?</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Benefits</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 881px; left: 40px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; font-size: 120%; line-height: 1.56;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">Easier Operations Mangement</li>
+                            <li class="fragment" data-fragment-index="1">Reduced Operational Cost</li>
+                            <li class="fragment" data-fragment-index="2">Reduced Development Time / Cost</li>
+                            <li class="fragment" data-fragment-index="3">Highly Scalable</li>
+                            <li class="fragment" data-fragment-index="4">Loosely Coupled systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Why build this?</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>For fun and learning</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 606.667px; height: 455px; left: 177px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img data-natural-width="1200" data-natural-height="900" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3044340/garden.jpg"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>The Problem</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Caring for my Garden</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 599px; height: 449.25px; left: 181px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img style="" data-natural-width="1200" data-natural-height="900" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3093801/IMG_20161009_162316.jpg"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="image" style="width: 899.922px; height: 490px; left: 30px; top: 140px;">
+                    <div class="sl-block-content">
+                        <img data-natural-width="1416" data-natural-height="771" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3044356/Serverless_Architecure__1_.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content">
+                        <h2>Serverless Garden</h2>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="image" style="width: 647.5px; height: 315px; left: 156px; top: 193px;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <img data-natural-width="962" data-natural-height="468" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3070757/IoT_Hub.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>IoT Service</h2>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>AWS IoT Service</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <p>How It works</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 794px; height: 464.49px; left: 80px; top: 188px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <img style="" data-natural-width="1000" data-natural-height="585" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3093690/aws-how-it-works.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 794px; height: 464px; left: 80px; top: 188px;">
+                    <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 0;">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 794 464">
+                            <rect width="794" height="464" class="shape-element" fill="rgb(255, 255, 255)"></rect>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Device Gatway</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>
+                            <span style="color:rgb(255, 255, 255)">Protocols</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; line-height: 1.56; font-size: 120%;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">MQTT  - devices</li>
+                            <li class="fragment" data-fragment-index="1">MQTT over Web Sockets  - browsers</li>
+                            <li class="fragment" data-fragment-index="2">HTTP  - last resort</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Device Gatway</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Authentication</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; font-size: 120%; line-height: 1.56;" data-has-line-height="">
+                        <ul>
+                            <li style="color:rgb(255, 255, 255)" class="fragment" data-fragment-index="0">X.509 Certificates - Mutual TLS</li>
+                            <li style="color:rgb(255, 255, 255)" class="fragment" data-fragment-index="1">IAM - Signed Requests</li>
+                            <li style="color:rgb(255, 255, 255)" class="fragment" data-fragment-index="2">Cognito - tokens</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Device</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Fake Device</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="code" style="width: 540px; height: 452px; left: 210px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13;" data-highlight-theme="monokai">
+                        <pre class="javascript">
+                            <code>const awsIot = require('aws-iot-device-sdk');
+
+const device = awsIot.device({
+  'keyPath': './certificates/private.pem.key',
+  'certPath': './certificates/certificate.pem.crt',
+  'caPath': './certificates/verisign-ca.pem',
+  'clientId': 'garden-aid-client-test-js',
+  'region': 'ap-southeast-2'
+});
+
+device
+  .on('connect', function() {
+    const topic = 'garden/soil/moisture';
+    const message = JSON.stringify({
+      DeviceId: 'test-js-device',
+      Recorded: (new Date()).toISOString(),
+      Level: level
+    });
+
+    device.publish(topic, message, {});
+  });
+</code></pre>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="image" style="width: 800px; height: 272.5px; left: 80px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <img data-natural-width="1600" data-natural-height="545" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3071339/javascript-device.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Demo</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <p>Fake Device</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>Rules Engine</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <p>
+                            <span style="color:rgb(255, 255, 255)">Message Selection &amp; Transformation</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="0">
+                        <p>
+                            <span style="text-align:left">SQL Statement</span>
+                        </p>
+                        <ul>
+                            <li>
+                                <span style="text-align:left">FROM — MQTT topic</span>
+                            </li>
+                            <li>SELECT — transforms the data</li>
+                            <li>WHERE (optional)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 856px; left: 52px; top: 468px;">
+                    <div class="sl-block-content fragment" style="z-index: 14; line-height: 1.56;" data-has-line-height="" dir="ui" data-fragment-index="1">
+                        <p>SELECT DeviceId, Recorded, Level FROM 'garden/soil/moisture'</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Rules Engine</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Actions</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">
+                                <p>Lambda</p>
+                            </li>
+                            <li class="fragment" data-fragment-index="1">
+                                <p>
+                                    <span style="color:rgb(255, 255, 255); text-align:left">DynamoDB</span>
+                                </p>
+                            </li>
+                            <li class="fragment" data-fragment-index="1">
+                                <p>
+                                    <span style="color:rgb(255, 255, 255); text-align:left">ElasticSearch</span>
+                                </p>
+                            </li>
+                            <li class="fragment" data-fragment-index="2">
+                                <p>
+                                    <span style="color:rgb(255, 255, 255); text-align:left">SNS</span>
+                                </p>
+                            </li>
+                            <li class="fragment" data-fragment-index="2">
+                                <p>
+                                    <span style="color:rgb(255, 255, 255); text-align:left">SQS</span>
+                                </p>
+                            </li>
+                            <li class="fragment" data-fragment-index="2">
+                                <p>
+                                    <span style="color:rgb(255, 255, 255); text-align:left">Kinesis</span>
+                                </p>
+                            </li>
+                            <li class="fragment" data-fragment-index="3">
+                                <p>CloudWatch</p>
+                            </li>
+                            <li class="fragment" data-fragment-index="4">
+                                <p>Republish to another MQTT topic.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Rules Engine</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>IoT Rule in serverless.yml</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 880px; height: 431px; left: 40px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13;" data-highlight-theme="monokai">
+                        <pre class="yaml">
+                            <code>SensorThingRule:
+  Type: AWS::IoT::TopicRule
+  Properties:
+    TopicRulePayload:
+      RuleDisabled: false
+      Sql: "SELECT DeviceId, Recorded, Level FROM '${{opt:stage}}/garden/soil/moisture'"
+      Actions:
+        -
+          DynamoDB:
+            TableName: { Ref: MoistureData }
+            HashKeyField: "ClientId"
+            HashKeyValue: "${clientId()}"
+            RangeKeyField: "Timestamp"
+            RangeKeyValue: "${timestamp()}"
+            PayloadField: "Data"
+            RoleArn: { Fn::GetAtt: [ IotThingRole, Arn ] }
+        -
+          Lambda:
+            FunctionArn: { Fn::GetAtt: [ checkMoistureLevel, Arn ] }</code></pre>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="image" style="width: 900px; height: 176.786px; left: 30px; top: 140px;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <img data-natural-width="1456" data-natural-height="286" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3070770/Notifications_Service_-_black.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Notifications Service</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 280px; top: 420px;">
+                    <div class="sl-block-content" style="z-index: 12; line-height: 1.56;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">Single purpose functions</li>
+                            <li class="fragment" data-fragment-index="1">High cohesion</li>
+                            <li class="fragment" data-fragment-index="2">Loose coupling</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>Messaging Options</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <p>Amazon Simple Queue Service (SQS)</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 360px; left: 80px; top: 350px;">
+                    <div class="sl-block-content fragment" style="z-index: 13; line-height: 1.573;" data-fragment-index="0" data-has-line-height="">
+                        <p>Benefits</p>
+                        <ul>
+                            <li>Dead letter queues</li>
+                            <li>Reliable</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 443px; left: 480px; top: 350px;">
+                    <div class="sl-block-content fragment" style="z-index: 14; line-height: 1.56;" data-fragment-index="1" data-has-line-height="">
+                        <p>Drawbacks</p>
+                        <ul>
+                            <li>No integration with Lambda</li>
+                            <li>Difficult to build scalable processor</li>
+                            <li>Single processor / queue</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 15;">
+                        <p>Fully Managed message queuing service.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>Messaging Options</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <p>Amazon Kinesis Streams</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 80px; top: 350px;">
+                    <div class="sl-block-content fragment" style="z-index: 13; line-height: 1.56;" data-fragment-index="0" data-has-line-height="">
+                        <p>Benefits</p>
+                        <ul>
+                            <li>Integrates with Lambda</li>
+                            <li>Batched messages</li>
+                            <li>Ordered messages</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 480px; top: 349px;">
+                    <div class="sl-block-content fragment" style="z-index: 14; line-height: 1.56;" data-fragment-index="1" data-has-line-height="">
+                        <p>Drawbacks</p>
+                        <ul>
+                            <li>Single lambda / shard</li>
+                            <li>Scale per shard</li>
+                            <li>Log jams</li>
+                            <li>Messages expire</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 15;">
+                        <p>Capture and store streaming data.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>Messaging Options</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <p>Amazon Simple Notification Service (SNS)&nbsp;</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 80px; top: 350px;">
+                    <div class="sl-block-content fragment" style="z-index: 13; line-height: 1.547;" data-fragment-index="0" data-has-line-height="">
+                        <p>Benefits</p>
+                        <ul>
+                            <li>Integrates with Lambda</li>
+                            <li>Fan out multiple Lambdas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 360px; left: 520px; top: 350px;">
+                    <div class="sl-block-content fragment" style="z-index: 14; line-height: 1.56;" data-fragment-index="1" data-has-line-height="">
+                        <p>Drawbacks</p>
+                        <ul>
+                            <li>Small message size</li>
+                            <li>3-5 retry's then drop message</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 202px;">
+                    <div class="sl-block-content" style="z-index: 15;">
+                        <p>Full managed messaging and Pub/Sub service</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Notification Service</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Check Level</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 800px; height: 495px; left: 80px; top: 187px;">
+                    <div class="sl-block-content" style="z-index: 13;" data-highlight-theme="monokai">
+                        <pre class="javascript">
+                            <code>const AWS = require('aws-sdk');
+const sns = new AWS.SNS();
+
+const publish = (msg, topicArn, cb) =&gt; {
+  sns.publish({
+    Message: JSON.stringify({
+      message: msg
+    }),
+    TopicArn: topicArn
+  }, cb);
+};
+
+module.exports.checkLevel = (event, context, cb) =&gt; {
+  if(event.Level &lt; 2.5) {
+    const msg = 'Moisture level has dropped to ' + event.Level;
+
+    const topicArn = process.env.mositureNotifyTopic;
+
+    publish(msg, topicArn, cb);
+    cb(null, { message: msg, event: event });
+    return;
+  }
+
+  cb(null, { message: 'No message to publish', event: event });
+}
+</code></pre>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Notifications Service</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Slack Notifier</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="code" style="width: 800px; height: 500px; left: 80px; top: 177px;">
+                    <div class="sl-block-content" style="z-index: 13;" data-highlight-theme="monokai">
+                        <pre class="javascript">
+                            <code>const BbPromise = require('bluebird');
+const rp = require('request-promise');
+const util = require('util');
+
+const notify = (msg) =&gt; {
+  return rp({
+    method: 'POST',
+    uri: process.env.slackWebHookUrl,
+    json: true,
+    body: {
+      text: msg,
+    },
+  });
+}
+
+module.exports.notify = (event, context, cb) =&gt;  {
+  console.log(util.inspect(event, false, 5));
+
+  const promises = [];
+
+  event.Records.forEach(function(record) {
+    if(record.EventSource !== 'aws:sns') {
+      console.warn('Recieved non sns event: ', record);
+      return;
+    }
+
+    const notification = JSON.parse(record.Sns.Message);
+    promises.push(notify(notification.message));
+  });
+
+  return BbPromise.all(promises)
+          .then(() =&gt; cb(null, { message: 'success' }))
+          .catch(cb);
+};</code></pre>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Demo</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Slack Notifications</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 794px; height: 502.867px; left: 80px; top: 169px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img style="" data-natural-width="1140" data-natural-height="722" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3093694/slack-notifications.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="image" style="width: 900px; height: 181.343px; left: 30px; top: 140px;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <img data-natural-width="1340" data-natural-height="270" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3070752/Serverless_GraphQL_-_Dark.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Web Services</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 40px; top: 388px;">
+                    <div class="sl-block-content fragment" style="z-index: 12; line-height: 1.521;" data-fragment-index="0" data-has-line-height="">
+                        <p>Web Client</p>
+                        <ul>
+                            <li>React SPA</li>
+                            <li>Firebase Hosting</li>
+                            <li>Auth0 for authentication</li>
+                        </ul>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 480px; top: 388px;">
+                    <div class="sl-block-content fragment" style="z-index: 14; line-height: 1.573;" data-fragment-index="1" data-has-line-height="">
+                        <p>Web Backend</p>
+                        <ul>
+                            <li>GraphQL API</li>
+                            <li>API Gateway + Lambda</li>
+                            <li>Data in DynamoDB</li>
+                            <li>Custom authoriser</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Web Services</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>API Gateway</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; line-height: 1.56; font-size: 120%;" data-has-line-height="">
+                        <p>What is it?</p>
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">HTTP Endpoint as a Service</li>
+                            <li class="fragment" data-fragment-index="1">Integrates with Lambda</li>
+                            <li class="fragment" data-fragment-index="2">Convert HTTP Request to Event</li>
+                            <li class="fragment" data-fragment-index="3">Can delegate Authorization</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Web Services</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Auth0 Authentication</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 438px; height: 457.543px; left: 261px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img style="" data-natural-width="762" data-natural-height="796" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3093711/garden-aid-login.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Web Services</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Authentication with GraphQL</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="code" style="width: 800px; height: 420px; left: 80px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13;" data-highlight-theme="monokai">
+                        <pre class="javascript">
+                            <code>const networkInterface = createNetworkInterface(GRAPHQL_URL);
+
+networkInterface.use([{
+
+  applyMiddleware(req, next) {
+    if (!req.options.headers) {
+      req.options.headers = {}; // Create the header object if needed.
+    }
+
+    // get the authentication token from local storage if it exists
+    const idToken = localStorage.getItem('idToken') || null;
+    if (idToken) {
+      req.options.headers.Authorization = `Bearer ${idToken}`;
+    }
+    next();
+  },
+}]);</code></pre>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Web Services</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Custom Authorizer</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 800px; height: 420px; left: 80px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13;" data-highlight-theme="monokai">
+                        <pre class="javascript">
+                            <code>const utils = require('./auth/utils');
+const auth0 = require('./auth/auth0');
+const AuthenticationClient = require('auth0').AuthenticationClient;
+
+const authClient = new AuthenticationClient({
+  domain: process.env.AUTH0_DOMAIN,
+  clientId: process.env.AUTH0_CLIENT_ID,
+});
+
+module.exports.handler = (event, context, cb) =&gt; {
+  console.log('Received event', event);
+
+  const token = utils.getToken(event.authorizationToken);
+
+  if (!token) {
+    return cb('Missing token from event');
+  }
+
+  const authInfo = utils.getAuthInfo(event.methodArn);
+
+  return authClient.tokens.getInfo(token)
+    .then((userInfo) =&gt; {
+      if (!userInfo || !userInfo.user_id) {
+        throw new Error('No user_id returned from Auth0');
+      }
+
+      console.log(`Building policy for ${userInfo.user_id} with: `, authInfo);
+
+      const policy = new AuthPolicy(userInfo.user_id, authInfo.accountId, authInfo);
+
+      policy.allowMethod(AuthPolicy.HttpVerb.POST, '/graphql');
+
+      const result = policy.build();
+      console.log('Returning auth result: ', result, result.policyDocument.Statement);
+
+      return result;
+    })
+    .catch((err) =&gt; {
+      console.log(err);
+      return 'Unauthorized';
+    });
+};
+</code></pre>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Demo</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Dashboard</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 794px; height: 477.036px; left: 80px; top: 181.5px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img data-natural-width="1498" data-natural-height="900" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3091402/moisture-dashboard.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 173px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>What is GraphQL?</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 240px; height: 140px; left: 40px; top: 420px;">
+                    <div class="sl-block-content fragment" style="z-index: 11;" data-fragment-index="0">
+                        <pre><code>type Project {
+  name: String
+  stars: Int
+  contributors: [User]
+}</code></pre>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 320px; height: 140px; left: 320px; top: 420px;">
+                    <div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="1">
+                        <pre><code>{
+  project(name: "GraphQL") {
+    stars
+  }
+}</code></pre>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 240px; height: 140px; left: 680px; top: 420px;">
+                    <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="2">
+                        <pre><code>{
+  "project": {
+    "stars": 4462
+  }
+}</code></pre>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 40px; top: 350px;">
+                    <div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="0">
+                        <p>Schema</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 680px; top: 350px;">
+                    <div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="2">
+                        <p>Results</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 320px; top: 350px;">
+                    <div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="1">
+                        <p>Query</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 173px; height: auto;">
+                    <div class="sl-block-content">
+                        <h2>Why GraphQL?</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 280px; height: auto;">
+                    <div class="sl-block-content" data-has-line-height="" style="line-height: 1.82;">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">One endpoint (per service) to access your data</li>
+                            <li class="fragment" data-fragment-index="1">The client chooses the response format</li>
+                            <li class="fragment" data-fragment-index="2">No versioning *</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 832px; height: 420px; left: 64px; top: 173px;">
+                    <div class="sl-block-content" style="z-index: 11;" data-highlight-theme="monokai">
+                        <pre class="javascript">
+                            <code>import gql from 'graphql-tag';
+import { connect } from 'react-apollo';
+import MoistureChart from '../../pres/Moisture/Chart';
+
+export default connect({
+  mapQueriesToProps({ ownProps, state }) {
+    return {
+      moisture: {
+        query: gql`{
+          moisture(hours: ${ownProps.hours}, clientId: "${ownProps.clientId}") {
+            date, moisture
+          }
+        }`,
+        variables: {},
+        pollInterval: 1000 * 30, // 30 seconds
+      },
+    };
+  },
+})(MoistureChart);</code></pre>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <h2>GraphQL Query</h2>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>GraphQL Schema</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 800px; height: 490px; left: 80px; top: 140px;">
+                    <div class="sl-block-content" style="z-index: 12; border-width: 1px;" data-highlight-theme="monokai">
+                        <pre class="javascript">
+                            <code>const graphql = require('graphql');
+const tablesFactory = require('./dynamodb/tables');
+const MoistureService    = require('./services/moisture');
+
+const tables = tablesFactory();
+const moistureService = MoistureService({ moistureTable: tables.Moisture });
+
+const MoistureType = new graphql.GraphQLObjectType({
+  name: 'MoistureType',
+  fields: {
+    date: { type: graphql.GraphQLString },
+    moisture: { type: graphql.GraphQLFloat },
+  }
+});
+
+const schema = new graphql.GraphQLSchema({
+  query: new graphql.GraphQLObjectType({
+    name: 'Root',
+    description: 'Root of the Schema',
+    fields: {
+      moisture:
+        name: 'MoistureQuery',
+        description: 'Retrieve moisture levels',
+        type: new graphql.GraphQLList(MoistureType),
+        args: {
+          clientId: {
+            type: graphql.GraphQLString,
+          },
+          hours: {
+            type: graphql.GraphQLInt,
+            defaultValue: 1
+          },
+        },
+        resolve: (source, args, root, ast) =&gt; {
+          const hours = args.hours &gt; 0 ? args.hours : 1;
+          return moistureService.getLastHours(args.clientId, hours);
+        }
+      }
+    }
+  })
+});
+
+module.exports = schema;</code></pre>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>AWS Lambda</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="code" style="width: 800px; height: 490px; left: 80px; top: 140px;">
+                    <div class="sl-block-content" style="z-index: 12; border-width: 1px;" data-highlight-theme="monokai">
+                        <pre class="javascript">
+                            <code>const graphql = require('graphql');
+
+const schema = require('./schema');
+
+module.exports.handler = function(event, context, cb) {
+  console.log('Received event', event);
+
+  const query = event.body.query;
+
+  return graphql.query(schema, event.body.query)
+    .then((response) =&gt; {
+      cb(null, response)
+    })
+    .catch((error) =&gt; {
+      cb(error)
+    });
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Demo</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>GraphQL Query</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 640px; height: 469.821px; left: 160px; top: 191px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img data-natural-width="1226" data-natural-height="900" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3091405/graphql-postman.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>GraphQL on AWS Lambda</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Single Lambda Design</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 590px; height: 402.725px; left: 185px; top: 227px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img data-natural-width="712" data-natural-height="486" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3058611/GraphQL_Single_Lambda__1_.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>GraphQL on AWS Lambda</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Lambda Tree Design</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 811.44px; height: 420px; left: 75px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img data-natural-width="966" data-natural-height="500" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3058638/GraphQL_Multiple_Lambdas.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Summary</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 593.75px; height: 475px; left: 183px; top: 183px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img style="" data-natural-width="600" data-natural-height="480" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3093750/1c0snz.jpg"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Serverless + IoT</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>My Experiences</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; font-size: 120%; line-height: 1.56;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">No server operations</li>
+                            <li class="fragment" data-fragment-index="1">Cost - $0</li>
+                            <li class="fragment" data-fragment-index="2">Use *aaS services</li>
+                            <li class="fragment" data-fragment-index="3">Focus on developing functionality</li>
+                            <li class="fragment" data-fragment-index="4">Iterate quickly &amp; scale</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Alternative Options</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>IoT Service</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; font-size: 120%; line-height: 1.56;" data-has-line-height="">
+                        <p>Device Shadows</p>
+                        <ul>
+                            <li>Stores Device State</li>
+                            <li>Get current state</li>
+                            <li>Track state</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Alternative Options</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Notifications Service</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; font-size: 120%; line-height: 1.56;" data-has-line-height="">
+                        <ul>
+                            <li style="color:rgb(255, 255, 255)">Monolithic Notification Lambda</li>
+                            <li style="color:rgb(255, 255, 255)">Other notification services
+
+                                <ul>
+                                    <li style="color:rgb(255, 255, 255)">Facebook Messenger</li>
+                                    <li style="color:rgb(255, 255, 255)">Sms - Twillio, Nexmo</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Alternative Options</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Web Services</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; line-height: 1.56; font-size: 120%;" data-has-line-height="">
+                        <ul>
+                            <li style="color:rgb(255, 255, 255)">Front-end Framework
+
+                                <ul>
+                                    <li style="color:rgb(255, 255, 255)">Angular</li>
+                                    <li style="color:rgb(255, 255, 255)">Vue</li>
+                                </ul>
+                            </li>
+                            <li style="color:rgb(255, 255, 255)">Elastic Search instead of DynamoDB&nbsp;</li>
+                            <li style="color:rgb(255, 255, 255)">Web Service own Data Store</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>What did I learn?</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 80px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 11; line-height: 1.82; font-size: 120%;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">Know your services well</li>
+                            <li class="fragment" data-fragment-index="1">Know what services exist</li>
+                            <li class="fragment" data-fragment-index="2">Selecting Boundaries is hard</li>
+                            <li class="fragment" data-fragment-index="3">Automation is always worth it</li>
+                            <li class="fragment" data-fragment-index="4">GraphQL is awesome</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <p>Many things</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>Resources</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 760px; left: 80px; top: 140px;">
+                    <div class="sl-block-content" style="z-index: 11; text-align: center;">
+                        <p style="text-align:center">
+                            <span style="font-size:1.4em">Code + Reading</span>
+                        </p>
+                        <ul>
+                            <li>
+                                <span style="font-size:1.2em">github.com/garden-aid</span>
+                            </li>
+                            <li>
+                                <span style="font-size:1.2em">
+                                    <span style="color:rgb(255, 255, 255); text-align:center">serverless.zone</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 760px; left: 100px; top: 376px;">
+                    <div class="sl-block-content" style="z-index: 14; text-align: center;">
+                        <p style="text-align:center">
+                            <span style="font-size:1.4em">Frameworks &amp; Tools</span>
+                        </p>
+                        <ul>
+                            <li>
+                                <span style="font-size:1.2em">serverless.com</span>
+                            </li>
+                            <li>
+                                <span style="font-size:1.2em">AWS</span>
+                            </li>
+                            <li>
+                                <span style="font-size:1.2em">Firebase</span>
+                            </li>
+                            <li>
+                                <span style="font-size:1.2em">Auth0</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 43px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h1>Thanks for Listening!</h1>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Questions?</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 315px;">
+                    <div class="sl-block-content" style="z-index: 12; text-align: left; font-size: 180%;">
+                        <p style="text-align: center;">brisbanejs.acloud.guru</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 541px;">
+                    <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                        <p>twitter.com/@johncmckim</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 490px;">
+                    <div class="sl-block-content" style="z-index: 15;">
+                        <p style="text-align:left">johncmckim.me</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 591px;">
+                    <div class="sl-block-content" style="z-index: 16; text-align: left;">
+                        <p>medium.com/@johncmckim</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

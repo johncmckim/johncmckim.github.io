@@ -5,4 +5,19 @@
   @include desktop {
     display: block;
   }
+
+  .navbar-nav {
+    li {
+      display: inline-block;
+      margin: 5px 10px;
+      list-style: none;
+    }
+  }
+  .navbar-right {
+    text-align: right;
+  }
+}
+
+#navbar {
+  font-size: 16px;
 }

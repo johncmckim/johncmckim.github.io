@@ -1,0 +1,26 @@
+---
+layout: layout
+---
+
+
+<section id="presentation" class="main-section">
+  <div class="container">
+    <div class="presentation-embed">
+      <iframe
+        src="{{ page.presentation }}"
+        width="576" height="420" scrolling="no" frameborder="0"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen>
+      </iframe>
+    </div>
+    <div class="presentation-links">
+      <a href="{{ page.presentation }}">Full screen</a>
+      {% if page.pdf %}
+      <a href="{{ page.presentation }}">PDF</a>
+      {% endif %}
+    </div>
+    <div class="presentation-description">
+      {{ content }}
+    </div>
+    </div>
+  </div>
+</section>
