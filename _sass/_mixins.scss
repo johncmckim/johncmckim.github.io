@@ -13,6 +13,12 @@ $desktop-width: 1024px;
   }
 }
 
+@mixin tablet {
+  @include min-width($tablet-width) {
+    @content;
+  }
+}
+
 @mixin vendor-property($property, $value) {
     @each $vendor in ('-moz-', '-webkit-', '-o-', '-ms-', '') {
         #{$vendor}#{$property}: #{$value};
