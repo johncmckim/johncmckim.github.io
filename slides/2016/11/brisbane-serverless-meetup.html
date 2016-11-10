@@ -1,0 +1,664 @@
+---
+layout: slides-v3
+title: Brisbane Serverless Meetup - Nov 2016
+description: >
+  An intro to Serverless and considerations for adopting Serverless
+---
+<div class="theme-font-montserrat theme-color-black-orange" style="width: 100%; height: 100%;">
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 700px; left: 0px; top: 0px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <img style="" data-natural-width="960" data-natural-height="700" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3180387/Slide.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 360px; height: 53.28px; left: 80px; top: 577px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <img style="" data-natural-width="500" data-natural-height="74" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3180416/logo-horiz-small.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 360px; height: 49.05px; left: 540px; top: 579px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img style="" data-natural-width="1600" data-natural-height="218" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3180424/Logo-Large.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 490px; height: 490px; left: 235px; top: 70px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <img style="" data-natural-width="800" data-natural-height="800" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3185229/RCL_insta_logo.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 611px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Thanks for hosting us</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 471.053px; height: 350px; left: 245px; top: 105px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <img data-natural-width="716" data-natural-height="532" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3048222/logo-large.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 560px;">
+                    <div class="sl-block-content" style="z-index: 12; font-size: 119%;">
+                        <p>https://acloud.guru</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 60px; top: 498px;">
+                    <div class="sl-block-content" style="z-index: 10; font-size: 80%;">
+                        <p>Software Engineer
+                            <br/>
+A Cloud Guru
+                        </p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 40px; top: 109px;">
+                    <div class="sl-block-content" style="z-index: 11; border-style: solid; border-radius: 200px; border-width: 1px;">
+                        <img data-natural-width="900" data-natural-height="900" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3071078/avatar.jpg"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 280px; left: 20px; top: 368px;">
+                    <div class="sl-block-content" style="z-index: 12; font-size: 110%;">
+                        <p>John McKim</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 40px; top: 428px;">
+                    <div class="sl-block-content" style="z-index: 13; font-size: 81%;">
+                        <p>@johncmckim</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 360px; top: 109px;">
+                    <div class="sl-block-content" style="z-index: 15; border-style: solid; border-radius: 200px; border-width: 1px; border-color: rgb(255, 255, 255);">
+                        <img style="" data-natural-width="512" data-natural-height="512" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3180441/adrian_avatar.jpeg"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 360px; top: 428px;">
+                    <div class="sl-block-content" style="z-index: 16; font-size: 81%;">
+                        <p>@adriancantrill</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 240px; height: 240px; left: 680px; top: 109px;">
+                    <div class="sl-block-content" style="z-index: 17; border-style: solid; border-radius: 200px; border-width: 1px;">
+                        <img style="" data-natural-width="400" data-natural-height="400" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3180451/mike_avatar.jpg"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 280px; left: 340px; top: 368px;">
+                    <div class="sl-block-content" style="z-index: 18; font-size: 110%;">
+                        <p>Adrian Cantrill</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 280px; left: 660px; top: 368px;">
+                    <div class="sl-block-content" style="z-index: 19; font-size: 110%;">
+                        <p>Mike Chambers</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 680px; top: 428px;">
+                    <div class="sl-block-content" style="z-index: 20; font-size: 81%;">
+                        <p>@mikegchambers</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 360px; top: 498px;">
+                    <div class="sl-block-content" style="z-index: 21; font-size: 80%;">
+                        <p>Lecturer
+                            <br/>
+A Cloud Guru
+                        </p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 240px; left: 680px; top: 498px;">
+                    <div class="sl-block-content" style="z-index: 23; font-size: 80%;">
+                        <p>Lecturer
+                            <br/>
+A Cloud Guru
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="image" style="width: 550px; height: 420.265px; left: 205px; top: 140px;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <img data-natural-width="1700" data-natural-height="1299" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3070951/serverless-usage.gif"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Serverless Framework</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 607px;">
+                    <div class="sl-block-content" style="z-index: 13; font-size: 119%;">
+                        <p>https://serverless.com</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 66px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>Agenda</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 158px;">
+                    <div class="sl-block-content fragment" style="z-index: 12; line-height: 1.43;" data-has-line-height="" data-fragment-index="0">
+                        <p style="text-align:left">6:15 - 6:45</p>
+                        <h3 style="text-align:left">
+                            <span style="color:rgb(255, 255, 255); text-align:left">Intro to Serverless &amp; ServerlessConf Recap</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 720px; left: 80px; top: 280px;">
+                    <div class="sl-block-content fragment" style="z-index: 13; line-height: 1.43;" data-has-line-height="" data-fragment-index="1">
+                        <p style="text-align:left">6:50 - 7:15</p>
+                        <h3 style="text-align:left">
+                            <span style="color:rgb(255, 255, 255); text-align:left">Introduction to Azure Functions</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 790px; left: 80px; top: 404px;">
+                    <div class="sl-block-content fragment" style="z-index: 15; line-height: 1.43;" data-has-line-height="" data-fragment-index="2">
+                        <p style="text-align:left">7:20 - 7:50</p>
+                        <h3 style="text-align:left">
+                            <span style="color:rgb(255, 255, 255); text-align:left">Building a business on Serverless</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 525px;">
+                    <div class="sl-block-content fragment" style="z-index: 16; line-height: 1.43;" data-has-line-height="" data-fragment-index="3">
+                        <p style="text-align:left">7:50 - 8:30</p>
+                        <h3 style="text-align:left">
+                            <span style="color:rgb(255, 255, 255); text-align:left">Q/A Panel + Pizza / drinks</span>
+                        </h3>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Quick Quiz</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Who Are you?</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 248px;">
+                    <div class="sl-block-content" style="z-index: 13; font-size: 140%; line-height: 1.625;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" style="color:rgb(255, 255, 255)" data-fragment-index="0">Developer</li>
+                            <li class="fragment" style="color:rgb(255, 255, 255)" data-fragment-index="1">Operations</li>
+                            <li class="fragment" style="color:rgb(255, 255, 255)" data-fragment-index="2">Business</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>Quick Quiz</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 248px;">
+                    <div class="sl-block-content" style="z-index: 11; font-size: 140%; line-height: 1.625;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">Never heard of Serverless</li>
+                            <li class="fragment" data-fragment-index="1">Built something for fun</li>
+                            <li class="fragment" data-fragment-index="2">Using it in production</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <p>
+                            <span style="color:rgb(255, 255, 255)">Your Experiences</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>What is Serverless?</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 695.38px; height: 490px; left: 133px; top: 169px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img style="" data-natural-width="430" data-natural-height="303" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3093747/1c0sm1.jpg"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Functions as a Service</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Properties of FaaS Services</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 225px;">
+                    <div class="sl-block-content" style="z-index: 13; line-height: 1.56; font-size: 120%;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">Function as unit of Deployment</li>
+                            <li class="fragment" data-fragment-index="1">Function as unit of Scale</li>
+                            <li class="fragment" data-fragment-index="2">Fully managed Scaling</li>
+                            <li class="fragment" data-fragment-index="3">Triggered by Events</li>
+                            <li class="fragment" data-fragment-index="4">Pay for execution time</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Serverless</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>FaaS + The Herd</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 794px; height: 376.683px; left: 80px; top: 232px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img style="" data-natural-width="723" data-natural-height="343" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3093771/The_Herd__1_.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 173px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>What is Serverless?</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 336px;">
+                    <div class="sl-block-content" style="z-index: 12; line-height: 1.56; font-size: 120%;" data-has-line-height="">
+                        <p>
+                            <em>A Serverless Architecture is an event driven system that utilises </em>
+                            <a href="https://serverless.zone/abstracting-the-back-end-with-faas-e5e80e837362" target="_blank">FaaS</a>
+                            <em>&nbsp;and other fully managed services for logic and persistence.</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Why choose Serverless?</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Benefits</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 881px; left: 40px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; font-size: 120%; line-height: 1.56;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">Easier Ops - (Not NoOps)</li>
+                            <li class="fragment" data-fragment-index="1">Reduced Operational Cost</li>
+                            <li class="fragment" data-fragment-index="2">Reduced Development Time / Cost</li>
+                            <li class="fragment" data-fragment-index="3">Highly Scalable</li>
+                            <li class="fragment" data-fragment-index="4">Loosely Coupled systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="image" style="width: 835.642px; height: 455px; left: 56px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <img data-natural-width="1416" data-natural-height="771" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3044356/Serverless_Architecure__1_.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Example Architecture</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 74px; top: 121px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <p>Serverless Garden</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>
+                            <strong>Who's Who in the Zoo</strong>
+                        </h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Providers in this space</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 360px; left: 540px; top: 191px;">
+                    <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="1">
+                        <p>* as a Service</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 520px; top: 280px;">
+                    <div class="sl-block-content" style="z-index: 14;">
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">AWS, Azure, Google</li>
+                            <li class="fragment" data-fragment-index="1">Auth0</li>
+                            <li class="fragment" data-fragment-index="1">Algolia</li>
+                            <li class="fragment" data-fragment-index="1">Firebase</li>
+                            <li class="fragment" data-fragment-index="1">Netlify</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 63.1385px; height: 76px; left: 47px; top: 522px;">
+                    <div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="0">
+                        <img style="" data-natural-width="216" data-natural-height="260" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3180546/Lamda.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 70px; height: 70px; left: 283px; top: 525px;">
+                    <div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="0">
+                        <img style="" data-natural-width="150" data-natural-height="150" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3180529/openshisk-dark.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 77.7778px; height: 70px; left: 199px; top: 525px;">
+                    <div class="sl-block-content fragment" data-inline-svg="false" style="z-index: 17;" data-fragment-index="0">
+                        <img style="" data-natural-width="80" data-natural-height="72" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3180525/google_cloud_functions.svg"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 70px; height: 70px; left: 123px; top: 525px;">
+                    <div class="sl-block-content fragment" style="z-index: 18;" data-fragment-index="0">
+                        <img style="" data-natural-width="180" data-natural-height="180" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3180524/azure-functions.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 70.5px; height: 70.5px; left: 363px; top: 524px;">
+                    <div class="sl-block-content fragment" data-inline-svg="false" style="z-index: 19;" data-fragment-index="0">
+                        <img style="" data-natural-width="150" data-natural-height="150" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3180497/webtask.svg"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 400px; left: 80px; top: 280px;">
+                    <div class="sl-block-content fragment" style="z-index: 20;" data-fragment-index="0">
+                        <ul>
+                            <li>AWS Lambda</li>
+                            <li>Azure Functions</li>
+                            <li>Google Cloud Functions</li>
+                            <li>IBM Open Whisk</li>
+                            <li>Webtask</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 360px; left: 60px; top: 191px;">
+                    <div class="sl-block-content fragment" style="z-index: 21;" data-fragment-index="0">
+                        <p>Functions as a Service</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 71px; height: 71px; left: 720px; top: 524px;">
+                    <div class="sl-block-content fragment" style="z-index: 22;" data-fragment-index="1">
+                        <img style="" data-natural-width="128" data-natural-height="128" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3194469/firebase.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 70px; height: 70px; left: 560px; top: 525px;">
+                    <div class="sl-block-content fragment" style="z-index: 23;" data-fragment-index="1">
+                        <img style="" data-natural-width="128" data-natural-height="128" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3194470/auth0.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 71px; height: 71px; left: 640px; top: 524px;">
+                    <div class="sl-block-content fragment" style="z-index: 24;" data-fragment-index="1">
+                        <img style="" data-natural-width="128" data-natural-height="128" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3194468/algolia.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 70px; height: 70px; left: 800px; top: 524px;">
+                    <div class="sl-block-content fragment" style="z-index: 25;" data-fragment-index="1">
+                        <img style="" data-natural-width="128" data-natural-height="128" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3194471/netlify.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>
+                            <strong>Who's Who in the Zoo</strong>
+                        </h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Tools in this space</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 360px; left: 540px; top: 191px;">
+                    <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="1">
+                        <p>Other Tools</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 520px; top: 274px;">
+                    <div class="sl-block-content fragment" style="z-index: 14; line-height: 1.56;" data-has-line-height="" data-fragment-index="1">
+                        <ul>
+                            <li>CloudFormation</li>
+                            <li>Terraform</li>
+                            <li>Ansible</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 400px; left: 79px; top: 280px;">
+                    <div class="sl-block-content fragment" style="z-index: 15; line-height: 1.56;" data-has-line-height="" data-fragment-index="0">
+                        <ul>
+                            <li>Serverless Framework</li>
+                            <li>Apex</li>
+                            <li>Chalice</li>
+                            <li>Claudia</li>
+                            <li>Sparta</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 360px; left: 60px; top: 191px;">
+                    <div class="sl-block-content fragment" style="z-index: 16;" data-fragment-index="0">
+                        <p>Frameworks</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 102px; height: 102px; left: 80px; top: 560px;">
+                    <div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="0">
+                        <img style="" data-natural-width="128" data-natural-height="128" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3194474/serverless.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 210.794px; height: 83px; left: 215px; top: 560px;">
+                    <div class="sl-block-content fragment" style="z-index: 18; border-width: 1px;" data-fragment-index="0">
+                        <img style="" data-natural-width="800" data-natural-height="315" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3194502/gosparta.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 102px; height: 102px; left: 480px; top: 551px;">
+                    <div class="sl-block-content fragment" style="z-index: 19;" data-fragment-index="0">
+                        <img style="" data-natural-width="128" data-natural-height="128" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3194506/claudia.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 102px; height: 102px; left: 640px; top: 560px;">
+                    <div class="sl-block-content fragment" style="z-index: 20;" data-fragment-index="1">
+                        <img style="" data-natural-width="128" data-natural-height="128" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3194513/ansible.png"/>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 102px; height: 102px; left: 800px; top: 560px;">
+                    <div class="sl-block-content fragment" style="z-index: 21;" data-fragment-index="1">
+                        <img style="" data-natural-width="128" data-natural-height="128" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3194514/terraform.png"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>Adopting Serverless</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <p>People and DevOps</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; line-height: 1.56; font-size: 120%;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">Knowledge</li>
+                            <li class="fragment" data-fragment-index="1">Access to Services</li>
+                            <li class="fragment" data-fragment-index="2">Development Process</li>
+                            <li class="fragment" data-fragment-index="3">Deployments</li>
+                            <li class="fragment" data-fragment-index="4">Testing</li>
+                            <li class="fragment" data-fragment-index="5">Logging and Monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>Adopting Serverless</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <p>Architectures and Security</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; line-height: 1.56; font-size: 120%;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">Vendor Lock-in</li>
+                            <li class="fragment" data-fragment-index="1">Service Boundaries</li>
+                            <li class="fragment" data-fragment-index="2">Inter-service communication</li>
+                            <li class="fragment" data-fragment-index="3">Service discovery</li>
+                            <li class="fragment" data-fragment-index="4">Distributed systems</li>
+                            <li class="fragment" data-fragment-index="5">Cross-cloud architectures</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>Adopting Serverless</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <p>Security</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; line-height: 1.56; font-size: 120%;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">Responsibility &amp; Transparency</li>
+                            <li class="fragment" data-fragment-index="1">Controls</li>
+                            <li class="fragment" data-fragment-index="2">Cross-Cloud Consistency</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <h2>Adopting Serverless</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <p>Outsourcing</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; line-height: 1.56; font-size: 120%;" data-has-line-height="">
+                        <ul>
+                            <li class="fragment" data-fragment-index="0">Responsibilities</li>
+                            <li class="fragment" data-fragment-index="1">Failures</li>
+                            <li class="fragment" data-fragment-index="2">Resilience</li>
+                            <li class="fragment" data-fragment-index="3">Support</li>
+                            <li class="fragment" data-fragment-index="4">Cost</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Sounds Hard</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Not no Problems - Better Problems</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 630.631px; height: 420px; left: 165px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img style="" data-natural-width="500" data-natural-height="333" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3194462/insert-brain-here.jpg"/>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Resources</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Blogs &amp; Videos</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; line-height: 1.625; font-size: 110%;" data-has-line-height="">
+                        <ul>
+                            <li>https://read.acloud.guru</li>
+                            <li>https://serverlesscode.com</li>
+                            <li>
+                                <span style="color:rgb(255, 255, 255); text-align:left">https://</span>serverless.zone
+                            </li>
+                            <li>https://serverless.com/blog</li>
+                            <li>http://video.serverlessconf.io</li>
+                            <li style="color:rgb(255, 255, 255)">
+                                <span style="text-align:left">https://</span>github.com/ServerlessHeroes/serverless-resources
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Resources</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 121px;">
+                    <div class="sl-block-content" style="z-index: 12;">
+                        <p>Community</p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 120px; top: 210px;">
+                    <div class="sl-block-content" style="z-index: 13; font-size: 110%; line-height: 1.69;" data-has-line-height="">
+                        <ul>
+                            <li style="color:rgb(255, 255, 255)">https://www.reddit.com/r/serverless</li>
+                            <li>https://wt-serverless-seattle.run.webtask.io/serverless-forum-signup</li>
+                            <li>https://webtask.io/slack</li>
+                            <li>http://forum.serverless.com</li>
+                            <li>https://gitter.im/serverless/serverless</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <h2>Thanks for listening!</h2>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="image" style="width: 593.75px; height: 475px; left: 183px; top: 183px;">
+                    <div class="sl-block-content" style="z-index: 13;">
+                        <img style="" data-natural-width="600" data-natural-height="480" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/578062/images/3093750/1c0snz.jpg"/>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
