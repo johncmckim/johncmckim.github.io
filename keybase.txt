@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/johncmckim
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://johncmckim.me
+  * I am johncmckim (https://keybase.io/johncmckim) on keybase.
+  * I have a public key ASA3Auj6jyN4fFD4UjSQ2XJMWdfYLDiptLs-FWB23bkK6wo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01203702e8fa8f23787c50f8523490d9724c59d7d82c38a9b4bb3e156076ddb90aeb0a",
+            "host": "keybase.io",
+            "kid": "01203702e8fa8f23787c50f8523490d9724c59d7d82c38a9b4bb3e156076ddb90aeb0a",
+            "uid": "e85e601bf9d7b44987bac5fa09945f19",
+            "username": "johncmckim"
+        },
+        "service": {
+            "hostname": "johncmckim.me",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1481857726,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1481857702,
+        "hash": "db141d373c5903413186fccbb4b74a1bfbb3a57e607ae48a095b7796976fb552082f7bc6c3fd8a3ba006c9944eab864f0c215827b117d1edc29f0c7bd05dcac5",
+        "seqno": 763718
+    },
+    "prev": "91c1fee025edd0e84948ec3038365c5d51871ec77d8f95eeed3af5d85d3ea13e",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNwLo+o8jeHxQ+FI0kNlyTFnX2Cw4qbS7PhVgdt25CusKp3BheWxvYWTFAvd7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzcwMmU4ZmE4ZjIzNzg3YzUwZjg1MjM0OTBkOTcyNGM1OWQ3ZDgyYzM4YTliNGJiM2UxNTYwNzZkZGI5MGFlYjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzcwMmU4ZmE4ZjIzNzg3YzUwZjg1MjM0OTBkOTcyNGM1OWQ3ZDgyYzM4YTliNGJiM2UxNTYwNzZkZGI5MGFlYjBhIiwidWlkIjoiZTg1ZTYwMWJmOWQ3YjQ0OTg3YmFjNWZhMDk5NDVmMTkiLCJ1c2VybmFtZSI6ImpvaG5jbWNraW0ifSwic2VydmljZSI6eyJob3N0bmFtZSI6ImpvaG5jbWNraW0ubWUiLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xOCJ9LCJjdGltZSI6MTQ4MTg1NzcyNiwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDgxODU3NzAyLCJoYXNoIjoiZGIxNDFkMzczYzU5MDM0MTMxODZmY2NiYjRiNzRhMWJmYmIzYTU3ZTYwN2FlNDhhMDk1Yjc3OTY5NzZmYjU1MjA4MmY3YmM2YzNmZDhhM2JhMDA2Yzk5NDRlYWI4NjRmMGMyMTU4MjdiMTE3ZDFlZGMyOWYwYzdiZDA1ZGNhYzUiLCJzZXFubyI6NzYzNzE4fSwicHJldiI6IjkxYzFmZWUwMjVlZGQwZTg0OTQ4ZWMzMDM4MzY1YzVkNTE4NzFlYzc3ZDhmOTVlZWVkM2FmNWQ4NWQzZWExM2UiLCJzZXFubyI6OSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxECF2lheJFKcZ0aU9ZngD0nrb68K2Dl7pvJCM0Z4XKGNWM3Fcw+ulvPeGFGGlq2xHJh3tUyc/Gd4SiI+5G5NN6IGqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgQIWQBW0mJTUFslTHLKxeEudaisIlU0Oh0IxfdIqGKx2jdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/johncmckim
+
+==================================================================
