@@ -20,7 +20,7 @@ avatar: avatar.jpeg
 feed:
   path: feed.xml
 
-blog_url:               https://blog.johncmckim.me
+blog_url:               https://medium.com/@johncmckim
 medium_username:        "@johncmckim"
 twitter_username:       johncmckim
 github_username:        johncmckim
