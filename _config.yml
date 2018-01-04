@@ -7,12 +7,16 @@ author:
   email: contact@johncmckim.me
   uri: "https://johncmckim.me"
 
+job:
+  prefix: the
+  title: Head of Development
+
 employer:
   name: A Cloud Guru
   uri: https://acloud.guru
 
 description: >
-  Full-Stack Developer, “DevOps guy”, occasional writer, cyclist, terrible gardener.
+  Head of Development at A Cloud Guru, occasional writer, cyclist, terrible gardener.
 
 baseurl: ""
 url: "https://johncmckim.me"
