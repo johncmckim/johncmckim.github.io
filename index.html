@@ -2,35 +2,59 @@
 layout: home
 header: hidden
 ---
-<section id="about">
+<section id="home">
   <div class="container">
-    <div class="avatar">
-      <img class="img-circle" src="{{ site.baseurl }}/static/img/{{ site.avatar }}" alt="Responsive image">
+    <div class="profile row">
+      <div class="col-8-sm">
+        <div class="info">
+          <h1>{{ site.author.name }}</h1>
+          <p>
+              {{ site.description }}
+          </p>
+          {% include social.html %}
+        </div>
+      </div>
+      <div class="col-4-sm">
+        <div class="avatar">
+          <img class="img-circle" src="{{ site.baseurl }}/static/img/{{ site.avatar }}" alt="Responsive image">
+        </div>
+      </div>
     </div>
-    <div class="info">
-      <p>
-        I'm <strong>{{ site.author.name }}</strong>,<br />
-        a Software Developer, <br />
-        Serverless enthusiast, occasional writer,<br />
-        cyclist and terrible gardner.
-      </p>
-      <p>
-         I live in Melbourne, Australia<br />
-         Work at <a href="{{ site.employer.uri }}">{{ site.employer.name }}</a> as {{ site.job.prefix }} {{ site.job.title }}.
-      </p>
-      <p>
-        I write about AWS, Serverless and Software Development on my <a href="{{ site.blog_url }}">blog</a>.
-      </p>
-      <p>
-        I give the occasional <a href="{{ site.baseurl }}presentations">presentation</a> and hoping to do more.
-      </p>
-      <p>
-        Contact me at
-        <a href="http://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a>
-        or by
-        <a href="mailto:{{ site.email }}">email</a>.
-      </p>
+    <div class="about row">
+      <div class="col-4-sm">
+        <p>
+          I'm John, {{ site.job.prefix }} {{ site.job.title }} 
+          at <a href="{{ site.employer.uri }}">{{ site.employer.name }}</a>.
+        </p>
+      </div>
+      <div class="col-4-sm">
+        <p>
+          I enjoy <a href="{{ site.blog_url }}">writing</a> and 
+          <a href="{{ site.baseurl }}presentations">speaking</a>
+          about technology and building teams.
+        </p>
+      </div>
+      <div class="col-4-sm">
+          <p>
+            I live and work in Melbourne, Australia.
+          </p>
+      </div>
     </div>
-    {% include social.html %}
   </div>
 </section>
+<section id="presentations" class="main-section">
+    <div class="post-list">
+      {% for post in site.posts %}
+      <div class="post-list-item">
+        <div class="post-date">
+          {{ post.date | date: "%B %e, %Y" }}
+        </div>
+        <div class="post-info">
+          <h5 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
+          <p class="post-description">{{ post.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+    
