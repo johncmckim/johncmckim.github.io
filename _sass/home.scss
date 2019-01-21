@@ -62,3 +62,36 @@
     }
   }
 }
+
+#posts {
+  margin-top: 2rem;
+  border-top: 2px solid $theme-color-darker;
+
+  .post-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+
+    .post-list-item {
+      width: 50%;
+      margin-bottom: 2rem;
+      padding-right: 20px;
+
+      .post-info {
+        font-family: $headings-font-family;
+
+        .post-title {
+          font-size: 18px;
+          margin-bottom: 6px;
+        }
+        .post-date {
+          font-size: 14px;
+        }
+      }
+
+      .post-description {
+        font-size: 16px;
+      }
+    }
+  }
+}

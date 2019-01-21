@@ -42,19 +42,21 @@ header: hidden
     </div>
   </div>
 </section>
-<section id="presentations" class="main-section">
+<section id="posts">
+  <div class="container">
     <div class="post-list">
       {% for post in site.posts %}
       <div class="post-list-item">
-        <div class="post-date">
-          {{ post.date | date: "%B %e, %Y" }}
-        </div>
         <div class="post-info">
           <h5 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
-          <p class="post-description">{{ post.description }}</p>
+          <div class="post-date">
+            {{ post.date | date: "%B %e, %Y" }}
+          </div>
         </div>
+        <p class="post-description">{{ post.description }}</p>
       </div>
       {% endfor %}
     </div>
-  </section>
+  </div>
+</section>
     
