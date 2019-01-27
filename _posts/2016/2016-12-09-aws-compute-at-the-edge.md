@@ -2,8 +2,12 @@
 layout: blog
 category: blog
 title: "AWS Compute is at the Edge"
+subtitle: AWS is developing services that bring compute to the edge
+poster_img: https://cdn-images-1.medium.com/max/6000/1*lnHCy2HcYpPB1tCDgQoVFg.jpeg
 description: >
-  TODO DESCRIPTION
+    Last week I sat in a room with thousands of other people at the AWS Re:Invent
+    Keynote. We all wanted to learn of the new and updated AWS services and how each
+    announcement would affect us...
 ---
 
 # AWS Compute is at the Edge
@@ -70,7 +74,7 @@ The service is in preview right now — [sign up](https://pages.awscloud.com/gre
 
 Compute at the Edge is an interesting direction for AWS. I hope to see AWS continue to develop more Edge based services for customers. I will be keeping a close eye on developments in this space.
 
-This year (2016) has been a big year of change for me. I started blogging, serverless development and working for [A Cloud Guru](undefined). This will be the last blog post for me this year. I hope you have [found](https://blog.johncmckim.me/express-to-aws-lambda-part-1-a057096abe34) [something](https://blog.johncmckim.me/serverless-framework-the-good-parts-9d84e5a02467) I [have](https://serverless.zone/abstracting-the-back-end-with-faas-e5e80e837362) [written](https://serverless.zone/ci-cd-with-serverless-v1-0-0-beta-ccb332944c6) [this](https://serverless.zone/serverless-architectures-9e23af71097a) [year](https://read.acloud.guru/adopting-serverless-people-and-devops-336e3ab89e96) [helpful](https://read.acloud.guru/aws-re-invent-2016-keynote-summary-39d254447747).
+This year (2016) has been a big year of change for me. I started blogging, serverless development and working for [A Cloud Guru](https://acloud.guru). This will be the last blog post for me this year. I hope you have [found](https://blog.johncmckim.me/express-to-aws-lambda-part-1-a057096abe34) [something](https://blog.johncmckim.me/serverless-framework-the-good-parts-9d84e5a02467) I [have](https://serverless.zone/abstracting-the-back-end-with-faas-e5e80e837362) [written](https://serverless.zone/ci-cd-with-serverless-v1-0-0-beta-ccb332944c6) [this](https://serverless.zone/serverless-architectures-9e23af71097a) [year](https://read.acloud.guru/adopting-serverless-people-and-devops-336e3ab89e96) [helpful](https://read.acloud.guru/aws-re-invent-2016-keynote-summary-39d254447747).
 
 I will be back next year with more ideas to share. If you want to read more on Serverless don’t forget to follow me [@johncmckim](https://twitter.com/johncmckim) on Twitter or Medium.
 

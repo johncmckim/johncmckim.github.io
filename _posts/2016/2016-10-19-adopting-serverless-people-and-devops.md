@@ -2,12 +2,11 @@
 layout: blog
 category: blog
 title: "Adopting Serverless — People and DevOps"
+subtitle: The first thing you should consider when adopting serverless is your people
+poster_img: https://cdn-images-1.medium.com/max/3840/1*qIFXKFyIkca-C52vK5eaig.jpeg
 description: >
-  TODO DESCRIPTION
+    Serverless Architectures are an emerging trend in cloud computing. If you have been to an AWS summit or developer day this year (2016), Serverless has been a major theme. AWS is not the only provider pushing serverless...
 ---
-url: https://read.acloud.guru/adopting-serverless-people-and-devops-336e3ab89e96
-date: Tue Sep 13 2016 18:20:29 GMT+1000 (Australian Eastern Standard Time)
-
 
 # Adopting Serverless — People and DevOps
 

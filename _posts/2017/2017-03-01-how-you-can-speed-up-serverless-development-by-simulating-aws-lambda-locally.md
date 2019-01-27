@@ -2,8 +2,11 @@
 layout: blog
 category: blog
 title: "How you can speed up serverless development by simulating AWS Lambda locally"
+poster_img: https://cdn-images-1.medium.com/max/3948/1*V29jx931qxByVNtYUOoUGA.png
 description: >
-  TODO DESCRIPTION
+  Designing AWS Lambda functions can be a frustrating experience. Each time you make
+  a change, you have to deploy your code to AWS before you can test it. Well, my
+  friend and I finally decided to do something about this...
 ---
 
 # How you can speed up serverless development by simulating AWS Lambda locally
@@ -87,7 +90,7 @@ While AWS Lambda is a complex service, the core elements are reasonably easy to 
 
 ### Function Runtimes
 
-We use a [Docker image](https://hub.docker.com/r/lambci/lambda/~/dockerfile/) created by [Michael Hart](undefined) to create the function runtime. Using Docker allows us to control the environment and enforce memory limits and timeouts.
+We use a [Docker image](https://hub.docker.com/r/lambci/lambda/~/dockerfile/) created by [Michael Hart](https://twitter.com/hichaelmart) to create the function runtime. Using Docker allows us to control the environment and enforce memory limits and timeouts.
 
 ### Function Registry
 
@@ -175,7 +178,7 @@ We designed Serverless Simulate to solve these problems.
 
 ## Go forth and build
 
-This plugin will help solve a big problem for myself and the team at [A Cloud Guru](undefined). Unit tests and local executions reduce the time we spend waiting for deployments to the cloud.
+This plugin will help solve a big problem for myself and the team at [A Cloud Guru](https://acloud.guru). Unit tests and local executions reduce the time we spend waiting for deployments to the cloud.
 
 The Serverless Framework and Serverless Simulate are both Open Source projects. If you want to get involved, you can help by creating issues or submitting a pull request.
 

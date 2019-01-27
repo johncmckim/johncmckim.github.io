@@ -2,13 +2,15 @@
 layout: blog
 category: blog
 title: "Serverless Event Sourcing at Nordstrom"
+subtitle: "Building a unified event stream on AWS"
+poster_img: https://cdn-images-1.medium.com/max/7936/1*91yAq3Bwa-l7Gi6V9TfgzA.png
 description: >
-  TODO DESCRIPTION
+    Leading up to Serverlessconf Austin this year we held the inaugural Serverless Architecture competition.
+    The competition was launched to encourage people to share their Serverless Architectures.
 ---
 
 # Serverless Event Sourcing at Nordstrom
-
-Building a unified event stream on AWS
+## Building a unified event stream on AWS
 
 ![](https://cdn-images-1.medium.com/max/7936/1*91yAq3Bwa-l7Gi6V9TfgzA.png)
 
@@ -138,7 +140,7 @@ I want to thank the team at Nordstrom for creating Hello Retail and sharing it w
 
 If you are interested in diving deeper into this project you can view the code on [Github](https://github.com/Nordstrom/hello-retail/) or take the [Hello Retail workshop](https://github.com/Nordstrom/hello-retail-workshop).
 
-I also recommend watching [this presentation](https://www.youtube.com/watch?v=STKCRSUsyP0) by [Martin W. Fowler](undefined) if you are unfamiliar with Event Sourcing.
+I also recommend watching [this presentation](https://www.youtube.com/watch?v=STKCRSUsyP0) by [Martin W. Fowler](https://twitter.com/martinfowler) if you are unfamiliar with Event Sourcing.
 
 The Nordstrom serverless team is hiring talented developers with a passion for learning and trying new things. If you’re interested, drop them a line at [serverless@nordstrom.com](mailto:serverless@nordstrom.com) and let them know what you think of Hello, Retail!
 

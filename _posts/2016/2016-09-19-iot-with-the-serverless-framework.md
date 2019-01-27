@@ -2,14 +2,16 @@
 layout: blog
 category: blog
 title: "AWS IoT with the Serverless Framework"
+subtitle: Building a monitoring system for my garden
+poster_img: https://cdn-images-1.medium.com/max/2000/1*3EmOF-0LCpb21xnU6Jrtww.png
 description: >
-  TODO DESCRIPTION
+    Over the last few weeks I have been writing about solving a problem I have with my garden.
+    I often forget to water my plants so I created a dashboard and notification system to help...
 ---
 
+![](https://cdn-images-1.medium.com/max/2000/1*3EmOF-0LCpb21xnU6Jrtww.png)
+
 # AWS IoT with the Serverless Framework
-
-AWS IoT with the Serverless Framework
-
 ### Building a monitoring system for my garden
 
 Over the last few weeks I have been writing about solving a [problem I have with my garden](https://serverless.zone/serverless-architectures-9e23af71097a). I often forget to water my plants so I [created a dashboard](https://serverless.zone/graphql-with-the-serverless-framework-79924829a8ca) and [notification system](https://serverless.zone/slack-webhooks-with-the-serverless-framework-4c01bb3c1411) to help.

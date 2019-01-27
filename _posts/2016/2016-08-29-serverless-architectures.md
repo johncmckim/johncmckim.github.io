@@ -2,15 +2,17 @@
 layout: blog
 category: blog
 title: "Serverless Architectures"
+subtitle: Building a Serverless system to solve a problem
+poster_img: https://cdn-images-1.medium.com/max/2600/1*nqFDeya8VK-ZS7ckXLaGnQ.jpeg
 description: >
-  TODO DESCRIPTION
+    I have been researching and learning about Serverless Architectures since May 2016.
+    Until recently I had been working on small projects. These projects focused on learning about different Serverless frameworks and deploying Serverless projects...
 ---
 
+![](https://cdn-images-1.medium.com/max/2600/1*nqFDeya8VK-ZS7ckXLaGnQ.jpeg)
+
 # Serverless Architectures
-
-Serverless Architectures
-
-### Building a Serverless system to solve a problem
+## Building a Serverless system to solve a problem
 
 I have been researching and learning about Serverless Architectures since May 2016. Until recently I had been working on small projects. These projects focused on learning about different Serverless frameworks and deploying Serverless projects. These were good learning experiences for me. Yet, small projects do not explore many of the benefits of Serverless Architectures. It was time for me to look at making something larger.
 
@@ -68,5 +70,3 @@ If you want to read about how I created each component, follow [Serverless Zone]
 * [Slack Webhooks with the Serverless Framework](https://serverless.zone/slack-webhooks-with-the-serverless-framework-4c01bb3c1411) — Building a notifications system for my garden
 
 * [AWS IoT with the Serverless Framework](https://serverless.zone/iot-with-the-serverless-framework-e228fae87be) — Building a monitoring system for my garden
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*

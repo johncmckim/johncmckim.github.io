@@ -2,8 +2,9 @@
 layout: blog
 category: blog
 title: "Express to AWS Lambda: Part 5"
+subtitle: Workers and Background Tasks
 description: >
-  TODO DESCRIPTION
+  In Part 1, Part 2, Part 3 and Part 4 of this series, we have learnt how to use API Gateway and AWS Lambda to build a web application. Web applications are often supported by other worker systems...
 ---
 
 # Express to AWS Lambda: Part 5
@@ -168,5 +169,3 @@ We cannot simulate SNS locally so we need to test our Serverless project in AWS.
 This is is the last post in this series and I hope it has helped you get started with the [Serverless Framework](http://serverless.com). If you want to explore this example and the previous examples, please check out the repo on [Github](https://github.com/johncmckim/express-to-aws-lambda/tree/3-response-templates).
 
 I plan to keep writing about the [Serverless Framework](http://serverless.com) and [AWS Lambda](http://aws.amazon.com/lambda/). If you want to see more articles like this, follow me on Medium or [Twitter](https://twitter.com/johncmckim).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*

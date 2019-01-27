@@ -2,8 +2,11 @@
 layout: blog
 category: blog
 title: "Adopting Serverless — Architectures and Security"
+subtitle: The best practices for serverless architectures are still developing
+poster_img: https://cdn-images-1.medium.com/max/6000/1*qwoALm-b6mmgPC-NG9nf2g.jpeg
 description: >
-  TODO DESCRIPTION
+    In my last article, I wrote about how going serverless may affect your People and DevOps.
+    In this article, I want to explore how Serverless affect application Architecture and Security...
 ---
 
 # Adopting Serverless — Architectures and Security

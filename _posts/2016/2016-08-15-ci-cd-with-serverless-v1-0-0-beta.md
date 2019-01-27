@@ -1,14 +1,16 @@
 ---
 layout: blog
 category: blog
-title: TITLE
+title: CI/CD with Serverless v1.0.0 beta
+poster_img: https://cdn-images-1.medium.com/max/2600/1*Kg5tXaWLicWZkRCYD43yUQ.png
 description: >
-  TODO DESCRIPTION
+  The Serverless Framework has seen a lot of changes over the last few months.
+  The team released a 1.0.0 beta which simplifies and improves the framework...
 ---
 
-# CI/CD with Serverless v1.0.0 beta
+![](https://cdn-images-1.medium.com/max/2600/1*Kg5tXaWLicWZkRCYD43yUQ.png)
 
-CI/CD with Serverless v1.0.0 beta
+# CI/CD with Serverless v1.0.0 beta
 
 The [Serverless Framework](http://serverless.com/) has seen a lot of changes over the last few months. The team released a 1.0.0 beta which simplifies and improves the framework.
 
@@ -112,5 +114,3 @@ Using CloudFormation for all resources has also changed how the Lamnda functions
 The code for this post is available on [Github](https://github.com/serverless-examples/serverless-cd-example). The repo is part of a new Gihub organisation for [Serverless Examples](https://github.com/serverless-examples). I am aiming to build a set of useful examples of various serverless frameworks for the community. I would love help with this, so if you would like to contribute add a response or message me on [Twitter](https://twitter.com/johncmckim).
 
 If you want to see more articles like this, follow [Serverless Zone](https://serverless.zone/) and myself on Medium or [Twitter](https://twitter.com/johncmckim).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*

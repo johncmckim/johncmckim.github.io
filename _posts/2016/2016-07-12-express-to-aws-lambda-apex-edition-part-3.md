@@ -2,8 +2,10 @@
 layout: blog
 category: blog
 title: "Express to AWS Lambda: Apex Edition (Part 3)"
+subtitle: Authorization and Workers
 description: >
-  TODO DESCRIPTION
+  In Part 1 and Part 2 of this series we have created an AWS Lambda function 
+  and API Gateway using the Apex Framework...
 ---
 
 # Express to AWS Lambda: Apex Edition (Part 3)
@@ -158,5 +160,3 @@ SNS is not the only event source for Lambda functions. Other AWS services such a
 This is the last post in this series. I hope it helped you get started with Apex and AWS Lambda. If you want to explore this example and the previous examples, please checkout the code on [Github](https://github.com/johncmckim/express-to-aws-lambda).
 
 If you want to see more articles like this, follow [Serverless Zone](https://serverless.zone/) and myself on Medium or [Twitter](https://twitter.com/johncmckim).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*

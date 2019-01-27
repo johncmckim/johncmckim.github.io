@@ -3,7 +3,8 @@ layout: blog
 category: blog
 title: "AWS Lambda in a VPC with the Serverless Framework"
 description: >
-  TODO DESCRIPTION
+  AWS Lambda is a compute service that allows us to run code. Yet, code doesn’t exist
+  in vacuum. Lambda functions need other resources to generate events and maintain state...
 ---
 
 # AWS Lambda in a VPC with the Serverless Framework
@@ -88,5 +89,3 @@ If you configure a Lambda function to run in a private subnet, it will not have 
 The code for this post is available on [Github](https://github.com/serverless-examples/serverless-infrastructure). The repo is part of a new Gihub organisation for [Serverless Examples](https://github.com/serverless-examples). I am aiming to build a set of useful examples of various serverless frameworks for the community. I would love help with this, so if you would like to contribute add a response or message me on [Twitter](https://twitter.com/johncmckim).
 
 If you want to see more articles like this, follow [Serverless Zone](https://serverless.zone/) and myself on Medium or [Twitter](https://twitter.com/johncmckim).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*

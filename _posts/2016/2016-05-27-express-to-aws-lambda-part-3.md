@@ -2,8 +2,10 @@
 layout: blog
 category: blog
 title: "Express to AWS Lambda: Part 3"
+subtitle: Response Templates
 description: >
-  TODO DESCRIPTION
+  In Part 1 and Part 2 of this series we looked at accepting requests with
+  AWS Lambda by converting a simple Express app to Serverless...
 ---
 
 # Express to AWS Lambda: Part 3
@@ -198,5 +200,3 @@ We haven’t covered:
 * [Worker instances or background tasks — Part 5](https://medium.com/@johncmckim/express-to-aws-lambda-part-5-dcde1532279c)
 
 I will cover those issues in future posts. If you want to explore this example more in the mean time, please check out the repo on [Github](https://github.com/johncmckim/express-to-aws-lambda/tree/3-response-templates).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*

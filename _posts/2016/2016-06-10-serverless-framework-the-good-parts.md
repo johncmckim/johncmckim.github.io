@@ -1,9 +1,10 @@
 ---
 layout: blog
 category: blog
-title: "Serverless Framework: The Good Parts"
+title: "Serverless Framework"
+subtitle: The Good Parts
 description: >
-  TODO DESCRIPTION
+    The Serverless Framework is relatively new application framework for developing applications on AWS Lambda and API Gateway. I recently wrote a five part series about my experiences learning the Serverless Framework...
 ---
 
 # Serverless Framework: The Good Parts
@@ -90,5 +91,3 @@ The Serverless team has an [issue on GitHub](https://github.com/serverless/serve
 I’m looking forward to version 1.0 of the Serverless Framework. The [issues on GitHub](https://github.com/serverless/serverless/milestones/1.0) are really promising. The framework is getting a big overhaul which will hopefully include support for [Google Cloud Functions](https://github.com/serverless/serverless/issues/1248) and [Azure Functions](https://github.com/serverless/serverless/issues/1158).
 
 Thanks for reading, I hope you found it useful. If you want to see more articles like this, follow me on Medium or [Twitter](https://twitter.com/johncmckim).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*

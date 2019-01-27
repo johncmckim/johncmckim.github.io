@@ -18,14 +18,8 @@ body {
 }
 
 #wrap {
-  padding-bottom: 50px;
+  padding: 20px 0 50px 0;
   min-height: 100%;
   height: auto;
-  margin: 0 auto -65px;
 }
 
-.main-section {
-  @include desktop {
-    margin-top: 50px;
-  }
-}

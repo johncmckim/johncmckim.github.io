@@ -3,69 +3,10 @@
   @include desktop {
     margin-top: 20px;
   }
-
-  $desktop-height: 210px;
-
-  .avatar {
-    text-align: right;
-
-    img {
-      $img-size: 160px;
-
-      height: $img-size;
-      width: $img-size;
-      margin-top: $desktop-height - $img-size;
-      margin-right: 10px;
-
-      border-radius: 5px;
-      vertical-align: middle;
-    }
-  }
-
-  .profile {
-    margin-bottom: 40px;
-  }
-
-  .info {
-    $info-height: 140px;
-
-    margin-top: $desktop-height - $info-height;
-    height: $info-height;
-    max-width: 500px;
-
-    h1 {
-      margin-bottom: 10px;
-      font-weight: 600;
-      letter-spacing: -1.5px;
-    }
-
-    p {
-      font-family: $headings-font-family;
-      font-size: 18px;
-      margin: 0px;
-    }
-
-    .social {
-      padding-top: 5px;
-      word-spacing: 15px;
-
-      h4 > a {
-        font-size: 18px;
-      }
-    }
-  }
-
-  .about {
-    p {
-      font-family: $headings-font-family;
-      font-size: 16px;
-    }
-  }
 }
 
 #posts {
   margin-top: 2rem;
-  border-top: 2px solid $theme-color-darker;
 
   .post-list {
     display: flex;
@@ -73,24 +14,50 @@
     margin-top: 1.5rem;
 
     .post-list-item {
-      width: 50%;
-      margin-bottom: 2rem;
-      padding-right: 20px;
+      width: 80%;
+      margin: 1.6rem auto;
+      padding: 20px;
+      box-sizing: border-box;
+
+      border-radius: 5px;
+      //box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 
       .post-info {
         font-family: $headings-font-family;
+        overflow: hidden;
+
+        .post-posterimg_c {
+          height: 260px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-clip: border-box;
+          background-size: cover;
+        }
 
         .post-title {
-          font-size: 18px;
-          margin-bottom: 6px;
+          max-width: 500px;
+          color: $color-black;
+          font-size: 22px;
+          margin-bottom: 3px;
+          word-break: break-word;
         }
+        .post-subtitle {
+          color: $color-grey;
+          font-size: 20px;
+        }
+
         .post-date {
+          color: $color-grey;
           font-size: 14px;
+          margin-top: 15px;
         }
       }
 
       .post-description {
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 1.6rem;
+        max-width: 700px;
       }
     }
   }

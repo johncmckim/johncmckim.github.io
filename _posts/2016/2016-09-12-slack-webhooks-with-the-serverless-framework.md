@@ -2,13 +2,17 @@
 layout: blog
 category: blog
 title: "Slack Webhooks with the Serverless Framework"
+subtitle: Building a notifications system for my garden
+poster_img: https://cdn-images-1.medium.com/max/2000/1*0rvxfaQlafsRjqw_GV9__Q.png
 description: >
-  TODO DESCRIPTION
+    I have been writing about a problem I have with my garden. I often forget to water
+    my plants and I need a system to help. To help solve this problem I created a
+    dashboard that allows me to track moisture levels...
 ---
 
-# Slack Webhooks with the Serverless Framework
+![](https://cdn-images-1.medium.com/max/2000/1*0rvxfaQlafsRjqw_GV9__Q.png)
 
-Slack Webhooks with the Serverless Framework
+# Slack Webhooks with the Serverless Framework
 
 ### Building a notifications system for my garden
 
@@ -64,7 +68,7 @@ There are alternative designs you could use for this system. With so little code
 
 ### Single Purpose Functions
 
-It would have been simple to implement Slack Webhooks with one function. So why did I choose to use two? [Paul Johnston](undefined) wrote a great article on [A Few Serverless “Rules of Thumb”](https://medium.com/@PaulDJohnston/a-few-serverless-rules-of-thumb-309764281921). The first rule in the article is
+It would have been simple to implement Slack Webhooks with one function. So why did I choose to use two? [Paul Johnston](https://medium.com/@PaulDJohnston) wrote a great article on [A Few Serverless “Rules of Thumb”](https://medium.com/@PaulDJohnston/a-few-serverless-rules-of-thumb-309764281921). The first rule in the article is
 > Zero or One data transformations per nano-function
 
 Or more generally each function should have a single responsibility. Separating the *decision* and *notification* makes each function responsible for only one task.
@@ -118,5 +122,3 @@ I am happy with this as a starting point. But there is a lot more I want to do w
 If you want a look at the code you can find it on [Github](https://github.com/garden-aid/chat-bff). Next week I will write about the AWS IoT Hub and IoT Rule Actions. To learn about more about GraphQL and the Serverless Framework try this [video course](https://acloud.guru/learn/serverless-with-graphql) that covers both in-depth.
 
 If you want to see how I created the rest of the project, follow [Serverless Zone](https://serverless.zone/) and myself on Medium or [Twitter](https://twitter.com/johncmckim).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*

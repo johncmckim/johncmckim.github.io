@@ -2,8 +2,10 @@
 layout: blog
 category: blog
 title: "My AWS Wishlist for 2017"
+poster_img: https://cdn-images-1.medium.com/max/5184/1*cGuojhsF_wDNnB73PbHAxQ.jpeg
 description: >
-  TODO DESCRIPTION
+    Amazon Web Services (AWS) is well known for listening to customer feedback.
+    This has been evident in the features they have delivered for their Serverless platform...
 ---
 
 # My AWS Wishlist for 2017
@@ -59,7 +61,7 @@ I would also like to be able to BYO docker image on Lambda. This would allow dev
 ### Support for Websockets
 
 AWS does not yet have a good solution for web applications that need Websockets. While the AWS IoT service supports Websockets, it is not suitable for web applications in many scenarios.
-> **Update:** I’m wrong about this ^. It seems I was mistaken in how AWS IoT authenticates web users. But it certainly could be easier. Thanks to [Preston Tamkin](undefined) for the responses to this.
+> **Update:** I’m wrong about this ^. It seems I was mistaken in how AWS IoT authenticates web users. But it certainly could be easier. Thanks to [Preston Tamkin](https://twitter.com/prestomation) for the responses to this.
 
 I would like to see Websockets supported in API Gateway. It should trigger functions when it receives a message. It would also need an API for sending messages to clients.
 
@@ -107,7 +109,7 @@ I would like to be able to capture failed messages for manual processing. This w
 
 ### CloudFormation types for CloudWatch Dashboards
 
-At [A Cloud Guru](undefined) we use CloudWatch Alerts to monitor our functions. We created a [plugin for the Serverless Framework](https://github.com/ACloudGuru/serverless-plugin-aws-alerts) to create these alerts.
+At [A Cloud Guru](https://acloud.guru) we use CloudWatch Alerts to monitor our functions. We created a [plugin for the Serverless Framework](https://github.com/ACloudGuru/serverless-plugin-aws-alerts) to create these alerts.
 
 We also use CloudWatch dashboards to monitor our functions. But we have to create and update these dashboards ourselves.
 

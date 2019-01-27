@@ -2,8 +2,12 @@
 layout: blog
 category: blog
 title: "Adopting Serverless — Outsourcing"
+subtitle: The effect of outsourcing to fully managed service providers
+poster_img: https://cdn-images-1.medium.com/max/6000/1*CfSUDWSeqbx9609nQkm7Fw.jpeg
 description: >
-  TODO DESCRIPTION
+    In my last article, I wrote about the Architectural and Securityissues you will
+    face when going serverless. In this article, I want to explore the effect of
+    outsourcing to fully managed service providers.
 ---
 
 # Adopting Serverless — Outsourcing
@@ -42,7 +46,7 @@ You are responsible for the service you provide to your customers. Your customer
 
 ### Failures
 
-No service is perfect. At some point your chosen service provider will have a bug or an outage. One of our providers recently had an outage prompting this tweet from our friend [Toby Hede](undefined).
+No service is perfect. At some point your chosen service provider will have a bug or an outage. One of our providers recently had an outage prompting this tweet from our friend [Toby Hede](https://medium.com/@tobyhede).
 
 <iframe src="https://medium.com/media/3fe756b2c227dfedc95284b73194dbe3" frameborder=0></iframe>
 
@@ -92,7 +96,7 @@ It has been over a year since A Cloud Guru was first created. There has been rap
 
 ### Would we do it again?
 
-YES! Adopting Serverless allowed [Sam Kroonenburg](undefined) to rapidly develop the first version of A Cloud Guru. The lack of an ecosystem around Serverless (tooling, docs, community) made this a difficult process.
+YES! Adopting Serverless allowed [Sam Kroonenburg](https://medium.com/@samkroon) to rapidly develop the first version of A Cloud Guru. The lack of an ecosystem around Serverless (tooling, docs, community) made this a difficult process.
 
 The ecosystem around serverless has seen the most development in the last year. There are great [frameworks](https://github.com/ServerlessHeroes/serverless-resources), [communities](https://wt-serverless-seattle.run.webtask.io/serverless-forum-signup) and even a [conference](http://serverlessconf.io/) dedicated to Serverless. We will continue to contribute by sharing our knowledge with the community.
 

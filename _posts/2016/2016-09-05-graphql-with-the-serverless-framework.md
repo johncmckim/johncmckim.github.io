@@ -2,15 +2,17 @@
 layout: blog
 category: blog
 title: "GraphQL with the Serverless Framework"
+subtitle: Building a dashboard for my garden
+poster_img: https://cdn-images-1.medium.com/max/2000/1*bE02jSZ6mM39kCdLZruqLw.png
 description: >
-  TODO DESCRIPTION
+    Last week I wrote about a problem I have with my garden. I often forget to water my plants
+    and I need a system to help. Part of my solution is a dashboard to track the soil moisture of my plants...
 ---
 
+![](https://cdn-images-1.medium.com/max/2000/1*bE02jSZ6mM39kCdLZruqLw.png)
+
 # GraphQL with the Serverless Framework
-
-GraphQL with the Serverless Framework
-
-### Building a dashboard for my garden
+## Building a dashboard for my garden
 
 Last week I wrote about a [problem I have with my garden](https://serverless.zone/serverless-architectures-9e23af71097a). I often forget to water my plants and I need a system to help. Part of my solution is a dashboard to track the soil moisture of my plants.
 
@@ -111,5 +113,3 @@ For me, the main advantage of GraphQL is that it puts the client close to the da
 If you want a look at the code you can find [Web Backend](https://github.com/garden-aid/web-bff) and [Web Client](https://github.com/garden-aid/web-client) on Github. I will continue to write about how I created the other pieces of this project over the coming weeks.
 
 If you want to see how I created the rest of the project, follow [Serverless Zone](https://serverless.zone/) and myself on Medium or [Twitter](https://twitter.com/johncmckim).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*

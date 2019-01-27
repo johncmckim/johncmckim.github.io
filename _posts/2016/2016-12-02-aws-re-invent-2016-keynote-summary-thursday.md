@@ -2,8 +2,12 @@
 layout: blog
 category: blog
 title: "AWS re:Invent 2016 — Thursday’s Keynote"
+subtitle: A Summary of the Thursday Keynote by Werner Vogels
+poster_img: https://cdn-images-1.medium.com/max/4800/1*6_v7P0Iac_zChhG0lsz5ow.jpeg
 description: >
-  TODO DESCRIPTION
+    The Keynote by Andy Jassy yesterday was packed with updates and announcements.
+    I was most excited by the new Amazon AI and IoT services. But the most notable
+    omission from yesterday was updates to the Lambda platform itself...
 ---
 
 # AWS re:Invent 2016 — Thursday’s Keynote
@@ -16,9 +20,9 @@ The Keynote by [Andy Jassy yesterday](https://read.acloud.guru/aws-re-invent-201
 
 But the most notable omission from yesterday was updates to the Lambda platform itself. So I had great expectations for the announcements today.
 
-[Werner Vogels](undefined) did not disappoint. We saw a range of great announcements for developers on AWS.
+[Werner Vogels](https://medium.com/@Werner) did not disappoint. We saw a range of great announcements for developers on AWS.
 
-![[Werner Vogels](undefined) did not disappoint.](https://cdn-images-1.medium.com/max/4800/1*JK9SjBVJVhac2lFhwsSaFg.png)*[Werner Vogels](undefined) did not disappoint.*
+![[Werner Vogels](https://medium.com/@Werner) did not disappoint.](https://cdn-images-1.medium.com/max/4800/1*JK9SjBVJVhac2lFhwsSaFg.png)*[Werner Vogels](https://medium.com/@Werner) did not disappoint.*
 
 ## Server Operations
 
@@ -196,17 +200,4 @@ There was a clear focus on Serverless by AWS at today’s keynote. I’m heading
 
 If you’re at AWS Re:Invent come and say hi at the re:Play party tonight. If you want to read more on Serverless don’t forget to follow me on [Twitter](https://twitter.com/johncmckim) or Medium.
 
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or learn AWS Lambda sign up and start learning today.*
-
-Thanks to [Daniel Parker](undefined) for the photos
-
-![](https://cdn-images-1.medium.com/max/2000/1*4SAJI2W8hInwwRCn7R8a6A.png)
-
-### A Cloud Guru
-
-The mission of A Cloud Guru is to engage individuals in a journey to level-up their cloud computing skills by delivering the world’s leading educational content designed to evolve both mindsets and careers.
-> # “Let no man in the world live in delusion. Without a Guru, none can cross over to the other shore.“ — Guru Nanak
-
-Our [courses](https://acloud.guru/courses) are delivered by industry experts with a shared passion for cloud computing. We strive to serve our growing community of cloud gurus, who generously contribute their insights in our [forums](https://acloud.guru/forums/home), workshops, meet-ups, and [conferences](https://acloud.guru/serverless).
-
-*Keep up with the A Cloud Guru crew [@acloudguru](https://twitter.com/acloudguru).*
+Thanks to Daniel Parker for the photos

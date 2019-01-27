@@ -2,8 +2,9 @@
 layout: blog
 category: blog
 title: "Express to AWS Lambda: Apex Edition (Part 1)"
+subtitle: Getting Started
 description: >
-  TODO DESCRIPTION
+    Functions as a Service (FaaS) and Serverless Architectures are catching imaginations of developers. Early adopters, like me, have been learning, exploring and creating Serverless applications...
 ---
 
 # Express to AWS Lambda: Apex Edition (Part 1)
@@ -95,5 +96,3 @@ After deploying the API Gateway endpoint I was able to
 So far we have created a basic Apex project, deployed the lambda function and invoked it. In the next part, we’ll look at using Terraform to deploy the infrastructure for our Apex project.
 
 If you want to see more articles like this, follow [Serverless Zone](https://serverless.zone/) and myself on Medium or [Twitter](https://twitter.com/johncmckim).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*

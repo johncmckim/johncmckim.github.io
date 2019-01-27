@@ -2,8 +2,10 @@
 layout: blog
 category: blog
 title: "Express to AWS Lambda: Apex Edition (Part 2)"
+subtitle: Terraform
 description: >
-  TODO DESCRIPTION
+  In Part 1 of this series we looked at how to get started with AWS Lambda and the Apex Framework.
+  So far we have built, deployed and tested an AWS Lambda function...
 ---
 
 # Express to AWS Lambda: Apex Edition (Part 2)
@@ -188,5 +190,3 @@ There is a lot of configuration involved in setting up a single HTTP endpoint wi
 So far we have created a basic Apex project with an API Gateway endpoint backed by Lambda. In the next part, we’ll look at using Terraform configure Authorization for API Gateway and a Lambda worker.
 
 If you want to see more articles like this, follow [Serverless Zone](https://serverless.zone/) and myself on Medium or [Twitter](https://twitter.com/johncmckim).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*

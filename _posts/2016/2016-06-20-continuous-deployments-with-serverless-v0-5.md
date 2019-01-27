@@ -2,9 +2,12 @@
 layout: blog
 category: blog
 title: "Continuous Deployments with Serverless v0.5"
+poster_img: https://cdn-images-1.medium.com/max/2600/1*l2uTwSuZNZJpSpinAq8xcg.png
 description: >
-  TODO DESCRIPTION
+  Over the last month I have been exploring and learning about the Serverless Framework. After learning about the framework itself, I decided to explore Continuous Deployments with Serverless...
 ---
+
+![](https://cdn-images-1.medium.com/max/2600/1*l2uTwSuZNZJpSpinAq8xcg.png)
 
 # Continuous Deployments with Serverless v0.5
 
@@ -135,15 +138,3 @@ One area I have not touched on is the IAM Policy for the IAM user that used to d
 Thanks for reading, I hope you found it useful. If you have any thoughts or suggestions about how to please add comment or create an [issue on Github](https://github.com/johncmckim/serverless-cd-example).
 
 If you want to see more articles like this, follow me on Medium or [Twitter](https://twitter.com/johncmckim).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*
-
-![](https://cdn-images-1.medium.com/max/2272/1*0hqOaABQ7XGPT-OYNgiUBg.png)
-
-![](https://cdn-images-1.medium.com/max/2272/1*Vgw1jkA6hgnvwzTsfMlnpg.png)
-
-![](https://cdn-images-1.medium.com/max/2272/1*gKBpq1ruUi0FVK2UM_I4tQ.png)
-> [Hacker Noon](http://bit.ly/Hackernoon) is how hackers start their afternoons. We’re a part of the [@AMI](http://bit.ly/atAMIatAMI) family. We are now [accepting submissions](http://bit.ly/hackernoonsubmission) and happy to [discuss advertising & sponsorship](mailto:partners@amipublications.com) opportunities.
-> If you enjoyed this story, we recommend reading our [latest tech stories](http://bit.ly/hackernoonlatestt) and [trending tech stories](https://hackernoon.com/trending). Until next time, don’t take the realities of the world for granted!
-
-![](https://cdn-images-1.medium.com/max/30000/1*35tCjoPcvq6LbB3I6Wegqw.jpeg)

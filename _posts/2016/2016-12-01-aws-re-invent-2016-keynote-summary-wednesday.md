@@ -2,8 +2,12 @@
 layout: blog
 category: blog
 title: "AWS re:Invent 2016 — Wednesday’s Keynote"
+subtitle: A Summary of the Wednesday Keynote by Andy Jassy
+poster_img: https://cdn-images-1.medium.com/max/5000/1*AxWQs0IucWfpipxzjhMTCA.jpeg
 description: >
-  TODO DESCRIPTION
+    After two big days of sessions and events at AWS re:Invent, Wednesday started with the
+    first of two general keynotes. There was an air of excitement for the first round of
+    announcements by AWS CEO, Andy Jassy...
 ---
 
 # AWS re:Invent 2016 — Wednesday’s Keynote
@@ -176,19 +180,6 @@ Available: Now
 
 ## What’s Next
 
-We saw some great announcements today and we’re looking forward to more tomorrow. Andy hinted that tomorrow will be the day for Serverless announcements. I hope [Werner Vogels](undefined) might tick off some more items on my [wish list](https://read.acloud.guru/my-aws-re-invent-2016-wishlist-cc6e00126789) tomorrow.
+We saw some great announcements today and we’re looking forward to more tomorrow. Andy hinted that tomorrow will be the day for Serverless announcements. I hope [Werner Vogels](https://medium.com/@Werner) might tick off some more items on my [wish list](https://read.acloud.guru/my-aws-re-invent-2016-wishlist-cc6e00126789) tomorrow.
 
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or learn AWS Lambda sign up and start learning today.*
-
-Thanks to my colleague [Daniel Parker](undefined) for the photos.
-
-![](https://cdn-images-1.medium.com/max/2000/1*4SAJI2W8hInwwRCn7R8a6A.png)
-
-### A Cloud Guru
-
-The mission of A Cloud Guru is to engage individuals in a journey to level-up their cloud computing skills by delivering the world’s leading educational content designed to evolve both mindsets and careers.
-> # “Let no man in the world live in delusion. Without a Guru, none can cross over to the other shore.“ — Guru Nanak
-
-Our [courses](https://acloud.guru/courses) are delivered by industry experts with a shared passion for cloud computing. We strive to serve our growing community of cloud gurus, who generously contribute their insights in our [forums](https://acloud.guru/forums/home), workshops, meet-ups, and [conferences](https://acloud.guru/serverless).
-
-*Keep up with the A Cloud Guru crew [@acloudguru](https://twitter.com/acloudguru).*
+Thanks to my colleague Daniel Parker for the photos.

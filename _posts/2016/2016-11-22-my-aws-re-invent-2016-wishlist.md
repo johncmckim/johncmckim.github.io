@@ -2,8 +2,12 @@
 layout: blog
 category: blog
 title: "My AWS re:Invent 2016 Serverless Wishlist"
+subtitle: The announcements I’m hoping to unwrap
+poster_img: https://cdn-images-1.medium.com/max/17664/1*3npkg_MuveHoIhOXFz4mjg.jpeg
 description: >
-  TODO DESCRIPTION
+    AWS re:Invent is just around the corner. AWS re:Invent is the global conference for Amazon Web Services.
+    I am lucky enough this year to be going with the A Cloud Guru team.
+    I am excited as this will be the first time I have attended...
 ---
 
 # My AWS re:Invent 2016 Serverless Wishlist
@@ -60,7 +64,7 @@ API Gateway allows you to map an Endpoint to a path on a Custom Domain. This all
 
 CloudFormation support for Custom Domains is on my wish list for AWS re:Invent. This should include support for provisioning certificates through Amazon Certificate Manager (ACM).
 
-[Ben Kehoe](undefined) spoke about his [ideas for Red/Back deployments](https://youtu.be/rsh6eKc1tVM?t=27m35s) at ServerlessConf. While it is not high on my list now, the ability to perform incremental rollouts would be a great addition.
+[Ben Kehoe](https://medium.com/@ben11kehoe) spoke about his [ideas for Red/Back deployments](https://youtu.be/rsh6eKc1tVM?t=27m35s) at ServerlessConf. While it is not high on my list now, the ability to perform incremental rollouts would be a great addition.
 
 ### New Language and Runtime Support on Lambda
 
@@ -70,7 +74,7 @@ I have a few runtimes on my wish list for AWS re:Invent. As a former .NET develo
 
 More generally I would like to see more regular runtime updates to Lambda. I do not want to wait for AWS re:Invent each year to get updated versions of language runtimes.
 
-**UPDATE:** [Werner Vogels](undefined) announced C# on Lambda at his Re:Invent Keynote. I would have like to have seen more language support. But, C# is a great addition.
+**UPDATE:** [Werner Vogels](https://medium.com/@Werner) announced C# on Lambda at his Re:Invent Keynote. I would have like to have seen more language support. But, C# is a great addition.
 
 ### Offline Development
 

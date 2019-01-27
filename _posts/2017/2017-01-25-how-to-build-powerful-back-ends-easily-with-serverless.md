@@ -2,8 +2,12 @@
 layout: blog
 category: blog
 title: "How to build powerful back-ends easily with Serverless"
+subtitle: Building an image processor on AWS Lambda
+poster_img: https://cdn-images-1.medium.com/max/5000/1*2zU4tyJnqVIS6pe1k_cDfg.png
 description: >
-  TODO DESCRIPTION
+    I started working as a Software Developer Full-time in 2012. You build it, you run
+    it was a core value of our small team. But, I knew nothing about servers. I soon had
+    to learn about subnets, load balancers, database clusters and more to support the code I wrote...
 ---
 
 # How to build powerful back-ends easily with Serverless

@@ -1,0 +1,50 @@
+
+.header {
+    $avatar-size: 60px;
+    $header-padding: 15px;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    padding: $header-padding 0;
+    background-color: $theme-color;
+
+    + div {
+        margin-top: $avatar-size + ($header-padding * 3);
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .header-avatar {
+            img {
+                display: block;
+                height: $avatar-size;
+                width: $avatar-size;
+                border-radius: 5px;
+                margin-right: 20px;
+            }
+        }
+
+        h1 {
+            display: block;
+            font-size: 30px;
+            margin: 0;
+            color: $color-white;
+        }
+
+        .social {
+            margin: 0;
+            padding: 0;
+
+            a {
+                color: $color-white;
+            }
+        }
+    }
+}

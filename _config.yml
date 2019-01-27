@@ -1,6 +1,6 @@
 # Site settings
 paginate: 8
-paginate_path: "/blog/page:num/"
+paginate_path: "/blog/:num/"
 
 title: John McKim
 email: contact@johncmckim.me

@@ -3,7 +3,7 @@ layout: blog
 category: blog
 title: "Abstracting the Back-end with FaaS"
 description: >
-  TODO DESCRIPTION
+    Abstractions are the fundamental building blocks of computing. If I need to build a web application, I don’t write machine code or build TCP packets. I use higher level languages like C or Javascript to send and receive HTTP messages...
 ---
 
 # Abstracting the Back-end with FaaS
@@ -55,5 +55,3 @@ Functions are the highest level of abstraction right now, but they might not alw
 What do you think? Is FaaS the ultimate abstraction or not?
 
 If you want to see more articles like this, follow me on Medium or [Twitter](https://twitter.com/johncmckim).
-
-*Myself and the team at [A Cloud Guru](https://acloud.guru/) are building a Serverless training system. If you need to get AWS certified or build Alexa skills sign up and start learning today.*
