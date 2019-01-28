@@ -1,5 +1,19 @@
 
+
 .header {
+    background-color: $header-bg-color;
+    color: $header-text-color;
+
+    h1,h2,h3,h4,h5,h6 {
+        color: $header-h-color;
+    }
+
+    a {
+        color: $header-a-color;
+    }
+}
+
+.nav {
     $avatar-size: 60px;
     $header-padding: 15px;
 
@@ -9,10 +23,10 @@
     left: 0;
 
     padding: $header-padding 0;
-    background-color: $theme-color;
+    background-color: $header-bg-color;
 
     + div {
-        margin-top: $avatar-size + ($header-padding * 3);
+        margin-top: $avatar-size + ($header-padding * 2) + 60px;
     }
 
     .container {
@@ -20,10 +34,10 @@
         align-items: center;
         justify-content: space-between;
 
-
-        .header-avatar {
+        .nav-avatar {
+            width: 150px;
             img {
-                display: block;
+                display: inline-block;
                 height: $avatar-size;
                 width: $avatar-size;
                 border-radius: 5px;
@@ -31,11 +45,12 @@
             }
         }
 
-        h1 {
+        .nav-title {
             display: block;
-            font-size: 30px;
+            font-family: $headings-font-family;
+            font-size: 20px;
             margin: 0;
-            color: $color-white;
+            color: $header-text-color;
         }
 
         .social {
@@ -43,7 +58,7 @@
             padding: 0;
 
             a {
-                color: $color-white;
+                color: $header-text-color;
             }
         }
     }

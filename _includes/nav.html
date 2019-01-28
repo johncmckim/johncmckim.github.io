@@ -1,10 +1,13 @@
-<div class="header">
+<div class="header nav">
     <div class="container">
-        <div class="header-avatar">
+        <div class="nav-avatar">
             <a href="/">
                 <img class="img-circle" src="{{ site.baseurl }}/static/img/{{ site.avatar }}" alt="Responsive image" />
             </a>
         </div>
+        {% if page.title %}
+        <div class="nav-title">{{page.title}}</div>
+        {% endif %}
         {% include social.html %}
     </div>
 </div>

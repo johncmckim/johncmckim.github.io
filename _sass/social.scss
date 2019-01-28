@@ -2,18 +2,23 @@
 .social {
   padding-top: 12px;
   word-spacing: 25px;
-}
-.social h4 {
-  > a {
-    font-size: 18px;
-    color: $color-black;
 
-    &:hover {
-      text-decoration: none;
+  h4 {
+    > a {
+      font-size: 18px;
+      color: $social-color-light;
+  
+      &:hover {
+        text-decoration: none;
+      }
+  
+      @include desktop {
+        font-size: 24px;
+      }
     }
+  }
 
-    @include desktop {
-      font-size: 24px;
-    }
+  &.social-dark h4>a{
+    color: $social-color-dark;
   }
 }

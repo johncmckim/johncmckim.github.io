@@ -1,18 +1,25 @@
 
 #blog {
+    background-color: $post-bg-color;
+    color: $post-text-color;
+    
     .container {
         max-width: 700px;
     }
 
     h1,h2,h3,h4,h5 {
+        color: $post-h-color;
         font-family: $headings-font-family;
         letter-spacing: -.02em;
         font-weight: 700;
         font-style: normal;
         letter-spacing: 0;
-        font-size: 34px;
         line-height: 1.15;
         letter-spacing: -.015em;
+    }
+
+    h1 + h2, h1 + h3 {
+        color: $post-hsub-color;
     }
 
     p {

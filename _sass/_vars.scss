@@ -2,8 +2,56 @@
 $headings-font-family:  "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 $body-font-family: Georgia,Cambria,"Times New Roman",Times,serif;
 
-$color-black: #333;
+// standars
 $color-white: #fff;
-$color-grey: #6b6b6b;
+$color-black-rasin: #222222;
+$color-black-rich: #050517;
+$color-gray-nickel: #6B6D76;
+$color-grey-space: #424B54;
+$color-blue-colomia: #C1CFDA;
 
-$theme-color: #282e29;
+// main theme
+$color-yellow: #F3DE8A;
+$color-green-turquoise: #157a6e;
+$color-green-jungle: #102029;
+$color-green-charelston: #222C30;
+$color-white-floral: #FFFCF2;
+
+// higlights
+$color-green-leather: #243010;
+$color-green-registration: #002500;
+$color-green-gunmetal: #243E36;
+$color-blue-cerulean: #134074;
+$color-blue-prussian: #13315C;
+$color-blue-celestial: #3E92CC;
+$color-blue-royal: #0A2463;
+$color-orange-jellybean: #DE6B48;
+$color-brown-bistre: #362C28;
+$color-licorice: #210F04;
+
+// theme
+$body-bg-color: $color-white;
+$body-text-color: $color-gray-nickel;
+
+$header-bg-color: $color-green-jungle;
+$header-h-color: $color-yellow;
+$header-a-color: $color-yellow;
+$header-text-color: $color-white;
+
+$home-bg-color: $color-white-floral;
+
+$card-bg-color: $color-white;
+$card-h-color: $color-black-rich;
+$card-hsub-color: $color-green-jungle;
+$card-text-color: $color-gray-nickel;
+
+$post-bg-color: $color-white;
+$post-h-color: $color-black-rich;
+$post-hsub-color: $color-green-jungle;
+$post-text-color: $color-gray-nickel;
+
+$pagination-active-color: $color-gray-nickel;
+$pagination-link-color: $color-green-charelston;
+
+$social-color-light: $color-white;
+$social-color-dark: $color-black-rich;

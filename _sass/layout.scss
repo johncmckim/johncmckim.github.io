@@ -8,18 +8,12 @@ body {
   font-family: $body-font-family;
   font-size: 14px;
   line-height: 1.42857143;
-  background-color: $color-white;
-  color: $color-black;
+  background-color: $body-bg-color;
+  color: $body-text-color;
 
   a {
     background-color: transparent;
     text-decoration: none;
   }
-}
-
-#wrap {
-  padding: 20px 0 50px 0;
-  min-height: 100%;
-  height: auto;
 }
 

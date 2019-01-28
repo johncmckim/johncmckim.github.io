@@ -1,8 +1,8 @@
 ---
 layout: home
-header: hidden
+nav: hidden
 ---
-<section id="home">
+<section class="header">
   <div class="container">
     <div class="profile">
         {% include profile.html %}
@@ -29,25 +29,24 @@ header: hidden
     </div>
   </div>
 </section>
-<section id="posts">
+<section class="post-list-container">
   <div class="container">
     <div class="post-list">
       {% for post in paginator.posts %}
-      <div class="post-list-item">
-        <div class="post-info">
+      <div class="card">
+        <div class="card-info">
           <a href="{{ site.baseurl }}{{ post.url }}">
             {% if post.poster_img %}
-            <div class="post-posterimg_c" style="background-image: url('{{post.poster_img}}');"></div>
-            <!--<img class="post-posterimg" src="{{post.poster_img}}" />-->
+            <div class="card-posterimg" style="background-image: url('{{post.poster_img}}');"></div>
             {% endif %}
-            <h4 class="post-title">{{ post.title }}</h4>
+            <h4 class="card-title">{{ post.title }}</h4>
             {% if post.subtitle %}
-            <h5 class="post-subtitle">{{ post.subtitle }}</h5>
+            <h5 class="card-subtitle">{{ post.subtitle }}</h5>
             {% endif %}
           </a>
         </div>
-        <p class="post-description">{{ post.description }}</p>
-        <div class="post-date">
+        <p class="card-description">{{ post.description }}</p>
+        <div class="card-date">
           {{ post.date | date: "%B %e, %Y" }}
         </div>
       </div>
