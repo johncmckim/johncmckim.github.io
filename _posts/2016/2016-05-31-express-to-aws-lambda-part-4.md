@@ -68,7 +68,7 @@ To convert our updated Express app to Serverless, we need to add Authentication 
 
 The first step we need to take is to add three new functions. The *user/post* will register users with our system. The *sessions/create* function will authenticate users with our system. The *authorization* function will authorise access to our *foo* function. We need and endpoint for the *users/post* and *sessions/create* functions, but not for *authoriztion* function.
 
-![Creating the functions with serverless](https://cdn-images-1.medium.com/max/3076/1*tcKYS-KInOMdJdofNulzNg.png)*Creating the functions with serverless*
+![Creating the functions with serverless](/static/medium/3076-1*tcKYS-KInOMdJdofNulzNg.png)*Creating the functions with serverless*
 
 Once we have added our functions, we should see the following files added to our project.
 
@@ -228,11 +228,11 @@ In our *authorization* function we’re using a class created by AWS to build ou
 
 In [Part 2](https://medium.com/@johncmckim/express-to-aws-lambda-part-2-f5183389a3ec) and [Part 3](https://medium.com/@johncmckim/express-to-aws-lambda-part-3-eca9a442f9ff), we used automated testing to test our HTTP endpoints. To test our changes I updated the tests to send a requests to our *foo* endpoints with and without a valid Authorization header.
 
-![Express console during testing](https://cdn-images-1.medium.com/max/2000/1*oW7nKryrFV_KpHyLJkWq1Q.png)*Express console during testing*
+![Express console during testing](/static/medium/2000-1*oW7nKryrFV_KpHyLJkWq1Q.png)*Express console during testing*
 
-![Serverless offline during testing](https://cdn-images-1.medium.com/max/5432/1*-7WKQRKNEeWtRcnBLtwyLg.png)*Serverless offline during testing*
+![Serverless offline during testing](/static/medium/5432-1*-7WKQRKNEeWtRcnBLtwyLg.png)*Serverless offline during testing*
 
-![Test results](https://cdn-images-1.medium.com/max/2764/1*5y5tLkJtC1ML4O6parATMw.png)*Test results*
+![Test results](/static/medium/2764-1*5y5tLkJtC1ML4O6parATMw.png)*Test results*
 
 Serverless offline has limited support for authorisation functions. There is an [open issue on Github](https://github.com/dherault/serverless-offline/issues/41) tracking support for this feature.
 

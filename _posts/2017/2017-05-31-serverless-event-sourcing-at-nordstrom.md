@@ -3,7 +3,7 @@ layout: blog
 category: blog
 title: "Serverless Event Sourcing at Nordstrom"
 subtitle: "Building a unified event stream on AWS"
-poster_img: https://cdn-images-1.medium.com/max/7936/1*91yAq3Bwa-l7Gi6V9TfgzA.png
+poster_img: static/medium/7936-1*91yAq3Bwa-l7Gi6V9TfgzA.png
 description: >
     Leading up to Serverlessconf Austin this year we held the inaugural Serverless Architecture competition.
     The competition was launched to encourage people to share their Serverless Architectures.
@@ -12,7 +12,7 @@ description: >
 # Serverless Event Sourcing at Nordstrom
 ## Building a unified event stream on AWS
 
-![](https://cdn-images-1.medium.com/max/7936/1*91yAq3Bwa-l7Gi6V9TfgzA.png)
+![](/static/medium/7936-1*91yAq3Bwa-l7Gi6V9TfgzA.png)
 
 Leading up to [Serverlessconf Austin](http://austin.serverlessconf.io/) this year we held the inaugural [Serverless Architecture competition](http://competition-austin.serverlessconf.io). The competition was launched to encourage people to share their Serverless Architectures.
 
@@ -62,7 +62,7 @@ To create the event, the front-end calls an API endpoint that triggers a functio
 
 A second function is listening for the Register Photographer event. This function uses the event data to write a new photographer into the database.
 
-![](https://cdn-images-1.medium.com/max/2000/1*6IKHJi456QfAqfM3xI1_3Q.png)
+![](/static/medium/2000-1*6IKHJi456QfAqfM3xI1_3Q.png)
 
 ### Product Creation
 
@@ -78,7 +78,7 @@ So without a direct call, how does the Product Service know when a photo of the 
 
 When the photo of the new product has been taken, the Photograph Management service creates a New Photo event. The event triggers a function in the Product Service which updates the database with the new photo.
 
-![](https://cdn-images-1.medium.com/max/3044/1*HJWwwhooFLY2-_UVo7fLRw.gif)
+![](/static/medium/3044-1*HJWwwhooFLY2-_UVo7fLRw.gif)
 
 ## Challenges
 
@@ -92,7 +92,7 @@ If there is an error with the consumer, the failed batch will remain at the end 
 
 In an active system, events will continue to be added to the stream while the consumer is not processing events. This creates a backlog of unprocessed events called a log jam.
 
-![An example of a log jam](https://cdn-images-1.medium.com/max/2456/1*p1hu_dk4q64bSIbnKPVIdg.png)*An example of a log jam*
+![An example of a log jam](/static/medium/2456-1*p1hu_dk4q64bSIbnKPVIdg.png)*An example of a log jam*
 
 Poison pill data is a common cause of log jams. These are malformed or unexpected events on the stream. These events need to be removed from the stream and stored for manual processing.
 

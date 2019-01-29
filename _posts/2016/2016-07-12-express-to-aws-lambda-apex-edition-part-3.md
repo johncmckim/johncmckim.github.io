@@ -47,7 +47,7 @@ The first step is to create our Custom Authorizer using Terraform. The *aws_api_
 
 While this will create a Custom Authorizer, it does not add the Authorizer to any API Gateway methods. Unfortunately, as of now (July 2016), the API Gateway resources in Terraform, do not support setting a Custom Authorizer on an API Gateway method. As a result, we need to manually configure the Authorizer in the AWS console.
 
-![Custom Authorizer](https://cdn-images-1.medium.com/max/3108/1*-YTnXERF-P-JV-NzTYVjgQ.png)*Custom Authorizer*
+![Custom Authorizer](/static/medium/3108-1*-YTnXERF-P-JV-NzTYVjgQ.png)*Custom Authorizer*
 
 Now that we have added a Custom Authorizer to our */jobs* endpoint, we need to configure the *auth* function to return a valid policy. The custom authorizer policy contains two properties, *principalId* and *policyDocument*. The *principalId* identifies the principal or user that made the request. The policy document is used to grant or deny access to particular endpoints.
 
@@ -92,7 +92,7 @@ The first step is to create an SNS topic and subscription using Terraform.
 
 Once you have applied the Terraform resources, you should see a SNS Trigger on your *worker* Lambda function.
 
-![](https://cdn-images-1.medium.com/max/3872/1*Vlx3MB43RQ3o0UWXPrCDVg.png)
+![](/static/medium/3872-1*Vlx3MB43RQ3o0UWXPrCDVg.png)
 
 Now that our worker will respond to a SNS topic, we need to publish SNS messages from our *jobs* function.
 

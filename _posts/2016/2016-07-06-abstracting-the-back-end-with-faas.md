@@ -26,7 +26,7 @@ Public cloud vendors offer services that provide various levels of abstraction o
 
 Each services provides a different level of abstraction and unit of scale.
 
-![](https://cdn-images-1.medium.com/max/2000/1*VD9n01kVn4hqOhyzY9X41w.png)
+![](/static/medium/2000-1*VD9n01kVn4hqOhyzY9X41w.png)
 
 Each layer in the stack is narrower than layer beneath it. A data centre can run many VM’s and an Application contains many Functions. Prior to FaaS, the Application was the smallest unit of scale. PaaS providers would allow developers to scale their applications by deploying multiple instances of their Application. With the introduction of FaaS, developers can break their application down into functions and scale each function independently.
 

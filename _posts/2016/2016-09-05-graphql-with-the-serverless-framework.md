@@ -3,13 +3,13 @@ layout: blog
 category: blog
 title: "GraphQL with the Serverless Framework"
 subtitle: Building a dashboard for my garden
-poster_img: https://cdn-images-1.medium.com/max/2000/1*bE02jSZ6mM39kCdLZruqLw.png
+poster_img: static/medium/2000-1*bE02jSZ6mM39kCdLZruqLw.png
 description: >
     Last week I wrote about a problem I have with my garden. I often forget to water my plants
     and I need a system to help. Part of my solution is a dashboard to track the soil moisture of my plants...
 ---
 
-![](https://cdn-images-1.medium.com/max/2000/1*bE02jSZ6mM39kCdLZruqLw.png)
+![](/static/medium/2000-1*bE02jSZ6mM39kCdLZruqLw.png)
 
 # GraphQL with the Serverless Framework
 ## Building a dashboard for my garden
@@ -68,7 +68,7 @@ The moisture service above queries the DynamoDB table. The results returned by t
 
 The end result of all this work is below, a working GraphQL endpoint.
 
-![Responses from the GraphQL endpoint](https://cdn-images-1.medium.com/max/5268/1*ONlJlgv5E1Ra-zvvzBFgCg.png)*Responses from the GraphQL endpoint*
+![Responses from the GraphQL endpoint](/static/medium/5268-1*ONlJlgv5E1Ra-zvvzBFgCg.png)*Responses from the GraphQL endpoint*
 
 Some of you may be wondering where the DynamoDB table is. This example uses an existing DynamoDB table. Creating the table and inserting moisture data into the table will be the topic of future post.
 
@@ -102,7 +102,7 @@ The results of the query are then mapped that to props in React components.
 
 The end result of all this code is the dashboard below. The dashboard polls for data every 30 seconds. This allows the user to see moisture levels in real time.
 
-![Moisture levels from a test device](https://cdn-images-1.medium.com/max/3952/1*hSyVk2HkAQMOY1xe47WzKw.png)*Moisture levels from a test device*
+![Moisture levels from a test device](/static/medium/3952-1*hSyVk2HkAQMOY1xe47WzKw.png)*Moisture levels from a test device*
 
 While this is only a fun project, working on it has sold me on a GraphQL + Lambda + React stack.
 

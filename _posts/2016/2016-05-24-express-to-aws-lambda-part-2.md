@@ -152,11 +152,11 @@ Since our project is getting larger I decided to automate testing our HTTP Metho
 
 To run the tests I start the Express App and Serverless app before running the test suite.
 
-![Express console during testing](https://cdn-images-1.medium.com/max/2088/1*DKZkMgHBzrQKfc856G_Fgw.png)*Express console during testing*
+![Express console during testing](/static/medium/2088-1*DKZkMgHBzrQKfc856G_Fgw.png)*Express console during testing*
 
-![Serverless console during testing](https://cdn-images-1.medium.com/max/2112/1*-vXH_WaRrq7X2_mwYkdgZw.png)*Serverless console during testing*
+![Serverless console during testing](/static/medium/2112-1*-vXH_WaRrq7X2_mwYkdgZw.png)*Serverless console during testing*
 
-![Test results](https://cdn-images-1.medium.com/max/2716/1*PucbkjLvmqm8T7ukWKmUIQ.png)*Test results*
+![Test results](/static/medium/2716-1*PucbkjLvmqm8T7ukWKmUIQ.png)*Test results*
 
 All of the tests passed confirming that the Serverless app responds in the same way as our Express App.
 

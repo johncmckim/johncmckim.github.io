@@ -2,7 +2,7 @@
 layout: blog
 category: blog
 title: "How you can speed up serverless development by simulating AWS Lambda locally"
-poster_img: https://cdn-images-1.medium.com/max/3948/1*V29jx931qxByVNtYUOoUGA.png
+poster_img: static/medium/3948-1*V29jx931qxByVNtYUOoUGA.png
 description: >
   Designing AWS Lambda functions can be a frustrating experience. Each time you make
   a change, you have to deploy your code to AWS before you can test it. Well, my
@@ -17,7 +17,7 @@ The end result is the [Serverless Simulate Plugin](https://github.com/gertjvr/se
 
 I’m going to walk you through how we built this and how you can start using it when you develop serverless apps.
 
-![](https://cdn-images-1.medium.com/max/3948/1*V29jx931qxByVNtYUOoUGA.png)
+![](/static/medium/3948-1*V29jx931qxByVNtYUOoUGA.png)
 
 ## Simulating API Gateway
 
@@ -25,7 +25,7 @@ API Gateway provides HTTP endpoints that invoke Lambda functions in response to 
 
 API Gateway maps the incoming HTTP request to an event payload for Lambda. When the Lambda function returns a result, the result is mapped to a HTTP response.
 
-![](https://cdn-images-1.medium.com/max/2524/1*muv-Ksm6yw-OzfxZsF-g0w.png)
+![](/static/medium/2524-1*muv-Ksm6yw-OzfxZsF-g0w.png)
 
 While API Gateway has a lot of features, most developers only use a few of them. We chose to only implement the features commonly used by Serverless developers.
 
@@ -62,7 +62,7 @@ When a request is received, the server performs the same mapping process as API 
 
 The end result is an express server that behaves like API Gateway.
 
-![](https://cdn-images-1.medium.com/max/3364/1*escLiZ18OoQOTfHbD5e9XA.png)
+![](/static/medium/3364-1*escLiZ18OoQOTfHbD5e9XA.png)
 
 ### Using the API Gateway Simulator
 
@@ -74,7 +74,7 @@ sls simulate apigateway -p 5000
 
 This will start a HTTP server that you can use to test your endpoints and functions locally.
 
-![Running the simulator on our example project](https://cdn-images-1.medium.com/max/2106/1*o_mtWduF79Whajwze_BvjA.png)*Running the simulator on our example project*
+![Running the simulator on our example project](/static/medium/2106-1*o_mtWduF79Whajwze_BvjA.png)*Running the simulator on our example project*
 
 The API Gateway simulation is similar to other offline plugins for the Serverless Framework. The real difference with [Serverless Simulate](https://github.com/gertjvr/serverless-plugin-simulate) is how we simulate Lambda locally.
 
@@ -84,7 +84,7 @@ AWS Lambda is powered by a HTTP API. Functions are invoked through a HTTP reques
 
 When the Invoke API is called, the Lambda service runs your code inside a container. For more details see [the docs](http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html).
 
-![](https://cdn-images-1.medium.com/max/2000/1*AQFe1LCHYuACfKv7pqYeqQ.png)
+![](/static/medium/2000-1*AQFe1LCHYuACfKv7pqYeqQ.png)
 
 While AWS Lambda is a complex service, the core elements are reasonably easy to simulate. To simulate it locally we implemented three services, function runtimes, a function registry and HTTP API.
 
@@ -104,7 +104,7 @@ The HTTP API provides a registration endpoint for clients. The registration endp
 
 The HTTP API also provides an endpoint to invoke functions. The invoke endpoint mimics the AWS Lambda API. This allows clients to use an AWS SDK to invoke functions.
 
-![](https://cdn-images-1.medium.com/max/3084/1*yWatcA3sRMVvD6lDBGM6Kw.png)
+![](/static/medium/3084-1*yWatcA3sRMVvD6lDBGM6Kw.png)
 
 ### Why use the Lambda Simulator
 
@@ -148,7 +148,7 @@ To start the Lambda simulator run the following command:
 
 sls simulate lambda -p 4000
 
-![Start the Lambda Simulator](https://cdn-images-1.medium.com/max/3522/1*sVFHZ-bHbsASXNTbiBJcbg.png)*Start the Lambda Simulator*
+![Start the Lambda Simulator](/static/medium/3522-1*sVFHZ-bHbsASXNTbiBJcbg.png)*Start the Lambda Simulator*
 
 To use the Lambda Simulator with the API Gateway, run the API Gateway command with --lambda-port argument.
 
@@ -156,7 +156,7 @@ sls simulate apigateway -p 5000 --lambda-port
 
 When using the --lambda-port argument, the API Gateway simulator invokes functions via the HTTP API.
 
-![Registered 10 functions with the Lambda Simulator](https://cdn-images-1.medium.com/max/2984/1*NX-MOCl9zp15ltMT427PRQ.png)*Registered 10 functions with the Lambda Simulator*
+![Registered 10 functions with the Lambda Simulator](/static/medium/2984-1*NX-MOCl9zp15ltMT427PRQ.png)*Registered 10 functions with the Lambda Simulator*
 
 This allows you to simulate complex architectures locally before deploying to the cloud.
 

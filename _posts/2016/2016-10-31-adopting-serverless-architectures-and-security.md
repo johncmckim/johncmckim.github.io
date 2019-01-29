@@ -3,7 +3,7 @@ layout: blog
 category: blog
 title: "Adopting Serverless — Architectures and Security"
 subtitle: The best practices for serverless architectures are still developing
-poster_img: https://cdn-images-1.medium.com/max/6000/1*qwoALm-b6mmgPC-NG9nf2g.jpeg
+poster_img: static/medium/6000-1*qwoALm-b6mmgPC-NG9nf2g.jpeg
 description: >
     In my last article, I wrote about how going serverless may affect your People and DevOps.
     In this article, I want to explore how Serverless affect application Architecture and Security...
@@ -13,7 +13,7 @@ description: >
 
 The best practices for serverless architectures are still developing
 
-![“Servers — Not my problem” ([http://startupstockphotos.com/](http://startupstockphotos.com/))](https://cdn-images-1.medium.com/max/6000/1*qwoALm-b6mmgPC-NG9nf2g.jpeg)*“Servers — Not my problem” ([http://startupstockphotos.com/](http://startupstockphotos.com/))*
+![“Servers — Not my problem” ([http://startupstockphotos.com/](http://startupstockphotos.com/))](/static/medium/6000-1*qwoALm-b6mmgPC-NG9nf2g.jpeg)*“Servers — Not my problem” ([http://startupstockphotos.com/](http://startupstockphotos.com/))*
 
 In my last article, I wrote about how going serverless may affect your [People and DevOps](https://read.acloud.guru/adopting-serverless-people-and-devops-336e3ab89e96). In this article, I want to explore how Serverless affect application Architecture and Security.
 
@@ -115,7 +115,7 @@ Most components in a Serverless system are outsourced to providers. My next arti
 
 If you want to read more on Serverless follow me on Medium or [Twitter](https://twitter.com/johncmckim).
 
-![](https://cdn-images-1.medium.com/max/2000/1*4SAJI2W8hInwwRCn7R8a6A.png)
+![](/static/medium/2000-1*4SAJI2W8hInwwRCn7R8a6A.png)
 
 ### A Cloud Guru
 

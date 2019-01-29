@@ -3,7 +3,7 @@ layout: blog
 category: blog
 title: "AWS Compute is at the Edge"
 subtitle: AWS is developing services that bring compute to the edge
-poster_img: https://cdn-images-1.medium.com/max/6000/1*lnHCy2HcYpPB1tCDgQoVFg.jpeg
+poster_img: static/medium/6000-1*lnHCy2HcYpPB1tCDgQoVFg.jpeg
 description: >
     Last week I sat in a room with thousands of other people at the AWS Re:Invent
     Keynote. We all wanted to learn of the new and updated AWS services and how each
@@ -14,13 +14,13 @@ description: >
 
 AWS is developing services that bring compute to the edge
 
-![](https://cdn-images-1.medium.com/max/6000/1*lnHCy2HcYpPB1tCDgQoVFg.jpeg)
+![](/static/medium/6000-1*lnHCy2HcYpPB1tCDgQoVFg.jpeg)
 
 Last week I sat in a room with thousands of other people at the AWS Re:Invent Keynote. We all wanted to learn of the new and updated AWS services and how each announcement would affect us.
 
 We saw a continued focus on Compute with announcements for EC2, ECS and Lambda. We also saw the addition of compute in Snowballs and on IoT devices. Developing services that bring compute to the edge is an interesting direction from AWS.
 
-![](https://cdn-images-1.medium.com/max/12000/1*b4KybLDNHFsD74MzM1IrAA.jpeg)
+![](/static/medium/12000-1*b4KybLDNHFsD74MzM1IrAA.jpeg)
 
 ## Lambda@Edge
 
@@ -54,7 +54,7 @@ Maybe you’re still skeptical. How much difference can an edge location make? W
 
 The chart below is the average response times for one of our health checks. I gathered data from various regions across a 7 day period. The Lambda function behind the health check responds in 2ms on average.
 
-![](https://cdn-images-1.medium.com/max/2000/1*9UeECZgUunRk_Wcy5xrwqw.png)
+![](/static/medium/2000-1*9UeECZgUunRk_Wcy5xrwqw.png)
 
 It should be obvious that A Cloud Guru is currently hosted in a US region. With a single region architecture, some customers will wait longer for responses than others.
 
@@ -78,7 +78,7 @@ This year (2016) has been a big year of change for me. I started blogging, serve
 
 I will be back next year with more ideas to share. If you want to read more on Serverless don’t forget to follow me [@johncmckim](https://twitter.com/johncmckim) on Twitter or Medium.
 
-![](https://cdn-images-1.medium.com/max/2000/1*4SAJI2W8hInwwRCn7R8a6A.png)
+![](/static/medium/2000-1*4SAJI2W8hInwwRCn7R8a6A.png)
 
 ### A Cloud Guru
 

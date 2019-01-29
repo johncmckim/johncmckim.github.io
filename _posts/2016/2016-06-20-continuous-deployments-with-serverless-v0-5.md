@@ -2,12 +2,12 @@
 layout: blog
 category: blog
 title: "Continuous Deployments with Serverless v0.5"
-poster_img: https://cdn-images-1.medium.com/max/2600/1*l2uTwSuZNZJpSpinAq8xcg.png
+poster_img: static/medium/2600-1*l2uTwSuZNZJpSpinAq8xcg.png
 description: >
   Over the last month I have been exploring and learning about the Serverless Framework. After learning about the framework itself, I decided to explore Continuous Deployments with Serverless...
 ---
 
-![](https://cdn-images-1.medium.com/max/2600/1*l2uTwSuZNZJpSpinAq8xcg.png)
+![](/static/medium/2600-1*l2uTwSuZNZJpSpinAq8xcg.png)
 
 # Continuous Deployments with Serverless v0.5
 
@@ -28,21 +28,21 @@ The Serverless Framework separates environments through *stages*. A stage allows
 
 The Serverless Framework leverages Lambda *versions* and *aliases* to isolate stages. When a function is deployed, a new version is created and the function is aliased using the name of the current stage.
 
-![See dev alias and versions in the left panel](https://cdn-images-1.medium.com/max/5760/1*dEwK9wqbAz3sEN4ubFQ9pA.png)*See dev alias and versions in the left panel*
+![See dev alias and versions in the left panel](/static/medium/5760-1*dEwK9wqbAz3sEN4ubFQ9pA.png)*See dev alias and versions in the left panel*
 
 The *endpoints* and *events* that you configure for your functions, point to a Lambda function alias that corresponds to the stage name. This allows you to deploy functions to a stage without affecting other stages.
 
 **API Gateway
 **API Gateway has *stages* built into the service. Each stage can have different endpoints, settings and variables. The Serverless Framework uses a stage variable, *functionAlias*, to point an API Gateway endpoint to the correct Lambda function.
 
-![Stage variable for dev](https://cdn-images-1.medium.com/max/4748/1*XSh09fXMyKVUHkvukbugvQ.png)*Stage variable for dev*
+![Stage variable for dev](/static/medium/4748-1*XSh09fXMyKVUHkvukbugvQ.png)*Stage variable for dev*
 
-![Endpoint configuration](https://cdn-images-1.medium.com/max/2476/1*QlWEJnVcFef5pjaSLNuXCg.png)*Endpoint configuration*
+![Endpoint configuration](/static/medium/2476-1*QlWEJnVcFef5pjaSLNuXCg.png)*Endpoint configuration*
 
 **Other Resources**
 All other resources in the Serverless Framework are deployed using CloudFormation. Each stage has a separate CloudFormation stack. This allows you to isolate each stage’s resources.
 
-![CloudFormation stacks for each stage](https://cdn-images-1.medium.com/max/2668/1*lotp7SCxPaoVc9WDi8ek7w.png)*CloudFormation stacks for each stage*
+![CloudFormation stacks for each stage](/static/medium/2668-1*lotp7SCxPaoVc9WDi8ek7w.png)*CloudFormation stacks for each stage*
 
 ### Automatic Deployments
 
@@ -107,7 +107,7 @@ To test these processes I have created a basic serverless project on [GitHub](ht
 
 I pushed the project to GitHub and Travis started a building the project. After a few revisions, I was able to get Travis to deploy the function and the endpoint.
 
-![Prod endpoint](https://cdn-images-1.medium.com/max/2088/1*xIuYgkiqMsU_ZqUjGAj8eg.png)*Prod endpoint*
+![Prod endpoint](/static/medium/2088-1*xIuYgkiqMsU_ZqUjGAj8eg.png)*Prod endpoint*
 
 To test the CD process I created a new branch, *develop*, and updated the *books/get* function.
 
@@ -121,11 +121,11 @@ To test the CD process I created a new branch, *develop*, and updated the *books
 
 After pushing the change, Travis started a [new build](https://travis-ci.org/johncmckim/serverless-cd-example/builds/137643683) and deployed the updated endpoint to the dev stage.
 
-![Dev endpoint](https://cdn-images-1.medium.com/max/2108/1*ra3kGUAyYQn8lyEToJK6Bw.png)*Dev endpoint*
+![Dev endpoint](/static/medium/2108-1*ra3kGUAyYQn8lyEToJK6Bw.png)*Dev endpoint*
 
 I then added new functions and endpoints to the project and pushed the changes to the develop branch.
 
-![New endpoints on the Dev stage](https://cdn-images-1.medium.com/max/3892/1*EGnc2gCcT1cMeBXbE_6p_w.png)*New endpoints on the Dev stage*
+![New endpoints on the Dev stage](/static/medium/3892-1*EGnc2gCcT1cMeBXbE_6p_w.png)*New endpoints on the Dev stage*
 
 The full code for my test project is up on [GitHub](https://github.com/johncmckim/serverless-cd-example). You can also check out the build logs on [Travis CI](https://travis-ci.org/johncmckim/serverless-cd-example/builds/137798319).
 

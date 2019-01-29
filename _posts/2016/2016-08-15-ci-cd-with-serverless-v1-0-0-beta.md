@@ -2,13 +2,13 @@
 layout: blog
 category: blog
 title: CI/CD with Serverless v1.0.0 beta
-poster_img: https://cdn-images-1.medium.com/max/2600/1*Kg5tXaWLicWZkRCYD43yUQ.png
+poster_img: static/medium/2600-1*Kg5tXaWLicWZkRCYD43yUQ.png
 description: >
   The Serverless Framework has seen a lot of changes over the last few months.
   The team released a 1.0.0 beta which simplifies and improves the framework...
 ---
 
-![](https://cdn-images-1.medium.com/max/2600/1*Kg5tXaWLicWZkRCYD43yUQ.png)
+![](/static/medium/2600-1*Kg5tXaWLicWZkRCYD43yUQ.png)
 
 # CI/CD with Serverless v1.0.0 beta
 
@@ -87,15 +87,15 @@ Let’s take a look at what happens when we run a deployment on a new project. T
 
 1. Update CloudFormation stack with resources
 
-![Running sls deploy for the first time](https://cdn-images-1.medium.com/max/2000/1*OTpHKuyIGBxQC0kygFhJVg.png)*Running sls deploy for the first time*
+![Running sls deploy for the first time](/static/medium/2000-1*OTpHKuyIGBxQC0kygFhJVg.png)*Running sls deploy for the first time*
 
 If there is a problem deploying your project, the CloudFormation will attempt to rollback. Be aware that this does not always work.
 
-![Updating stack](https://cdn-images-1.medium.com/max/5664/1*d_r50Ni8MuclZlJIChu3SA.png)*Updating stack*
+![Updating stack](/static/medium/5664-1*d_r50Ni8MuclZlJIChu3SA.png)*Updating stack*
 
 Using CloudFormation for all resolves has also simplified the removal of AWS resources.
 
-![](https://cdn-images-1.medium.com/max/2328/1*iUbKPsajdoSIgnVSdlWX_w.png)
+![](/static/medium/2328-1*iUbKPsajdoSIgnVSdlWX_w.png)
 
 This removes the S3 bucket containing your code and the CloudFormation stack.
 

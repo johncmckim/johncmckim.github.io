@@ -3,7 +3,7 @@ layout: blog
 category: blog
 title: "How to build powerful back-ends easily with Serverless"
 subtitle: Building an image processor on AWS Lambda
-poster_img: https://cdn-images-1.medium.com/max/5000/1*2zU4tyJnqVIS6pe1k_cDfg.png
+poster_img: static/medium/5000-1*2zU4tyJnqVIS6pe1k_cDfg.png
 description: >
     I started working as a Software Developer Full-time in 2012. You build it, you run
     it was a core value of our small team. But, I knew nothing about servers. I soon had
@@ -14,7 +14,7 @@ description: >
 
 Building an image processor on AWS Lambda
 
-![Meeting [Jeff Barr](https://twitter.com/jeffbarr) at AWS re:Invent](https://cdn-images-1.medium.com/max/5000/1*2zU4tyJnqVIS6pe1k_cDfg.png)*Meeting [Jeff Barr](https://twitter.com/jeffbarr) at AWS re:Invent*
+![Meeting [Jeff Barr](https://twitter.com/jeffbarr) at AWS re:Invent](/static/medium/5000-1*2zU4tyJnqVIS6pe1k_cDfg.png)*Meeting [Jeff Barr](https://twitter.com/jeffbarr) at AWS re:Invent*
 
 I started working as a Software Developer Full-time in 2012. You build it, you run it was a core value of our small team. But, I knew nothing about servers. I soon had to learn about subnets, load balancers, database clusters and more to support the code I wrote. For me, building software that solves problems is fun, managing servers isn’t.
 
@@ -77,7 +77,7 @@ There are three services I need to develop this system.
 
 Using those services I developed the following architecture.
 
-![A Serverless Architecture](https://cdn-images-1.medium.com/max/2716/1*UxnCvl7QsUEQiZAu14lg-g.png)*A Serverless Architecture*
+![A Serverless Architecture](/static/medium/2716-1*UxnCvl7QsUEQiZAu14lg-g.png)*A Serverless Architecture*
 
 Let’s go back to the definition of a Serverless architecture.
 > An event driven system that utilises FaaS and other fully managed services for logic and persistence.
@@ -154,7 +154,7 @@ The final step is to deploy the project and test it. To deploy the project I ran
 
 I then uploaded images from [Pexels](https://www.pexels.com/) to S3 and checked the results.
 
-![Photos from [Pexels](https://www.pexels.com)](https://cdn-images-1.medium.com/max/2402/1*IPrXw-4X2I6q_PpTAKVmBA.png)*Photos from [Pexels](https://www.pexels.com)*
+![Photos from [Pexels](https://www.pexels.com)](/static/medium/2402-1*IPrXw-4X2I6q_PpTAKVmBA.png)*Photos from [Pexels](https://www.pexels.com)*
 
 This was a really fun project to build. Building a project project like this is the best way to learn. It will help you understand event driven architectures and how to create Serverless systems.
 
@@ -182,12 +182,12 @@ I hope post has inspired you to look at Serverless. There are lots of great use 
 
 If you have any questions about this project or Serverless in general you can contact me on Medium or [Twitter](https://twitter.com/johncmckim). I’ll be running a workshop at [ServerlessConf Austin](http://austin.serverlessconf.io/) if you want to meet me in person.
 
-![](https://cdn-images-1.medium.com/max/2272/1*0hqOaABQ7XGPT-OYNgiUBg.png)
+![](/static/medium/2272-1*0hqOaABQ7XGPT-OYNgiUBg.png)
 
-![](https://cdn-images-1.medium.com/max/2272/1*Vgw1jkA6hgnvwzTsfMlnpg.png)
+![](/static/medium/2272-1*Vgw1jkA6hgnvwzTsfMlnpg.png)
 
-![](https://cdn-images-1.medium.com/max/2272/1*gKBpq1ruUi0FVK2UM_I4tQ.png)
+![](/static/medium/2272-1*gKBpq1ruUi0FVK2UM_I4tQ.png)
 > [Hacker Noon](http://bit.ly/Hackernoon) is how hackers start their afternoons. We’re a part of the [@AMI](http://bit.ly/atAMIatAMI) family. We are now [accepting submissions](http://bit.ly/hackernoonsubmission) and happy to [discuss advertising & sponsorship](mailto:partners@amipublications.com) opportunities.
 > If you enjoyed this story, we recommend reading our [latest tech stories](http://bit.ly/hackernoonlatestt) and [trending tech stories](https://hackernoon.com/trending). Until next time, don’t take the realities of the world for granted!
 
-![](https://cdn-images-1.medium.com/max/30000/1*35tCjoPcvq6LbB3I6Wegqw.jpeg)
+![](/static/medium/30000-1*35tCjoPcvq6LbB3I6Wegqw.jpeg)

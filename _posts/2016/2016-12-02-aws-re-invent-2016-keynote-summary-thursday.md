@@ -3,7 +3,7 @@ layout: blog
 category: blog
 title: "AWS re:Invent 2016 — Thursday’s Keynote"
 subtitle: A Summary of the Thursday Keynote by Werner Vogels
-poster_img: https://cdn-images-1.medium.com/max/4800/1*6_v7P0Iac_zChhG0lsz5ow.jpeg
+poster_img: static/medium/4800-1*6_v7P0Iac_zChhG0lsz5ow.jpeg
 description: >
     The Keynote by Andy Jassy yesterday was packed with updates and announcements.
     I was most excited by the new Amazon AI and IoT services. But the most notable
@@ -14,7 +14,7 @@ description: >
 
 A Summary of the Thursday Keynote by Werner Vogels
 
-![](https://cdn-images-1.medium.com/max/4800/1*6_v7P0Iac_zChhG0lsz5ow.jpeg)
+![](/static/medium/4800-1*6_v7P0Iac_zChhG0lsz5ow.jpeg)
 
 The Keynote by [Andy Jassy yesterday](https://read.acloud.guru/aws-re-invent-2016-keynote-summary-39d254447747) was packed with updates and announcements. I was most excited by the new Amazon AI and IoT services.
 
@@ -22,7 +22,7 @@ But the most notable omission from yesterday was updates to the Lambda platform 
 
 [Werner Vogels](https://medium.com/@Werner) did not disappoint. We saw a range of great announcements for developers on AWS.
 
-![[Werner Vogels](https://medium.com/@Werner) did not disappoint.](https://cdn-images-1.medium.com/max/4800/1*JK9SjBVJVhac2lFhwsSaFg.png)*[Werner Vogels](https://medium.com/@Werner) did not disappoint.*
+![[Werner Vogels](https://medium.com/@Werner) did not disappoint.](/static/medium/4800-1*JK9SjBVJVhac2lFhwsSaFg.png)*[Werner Vogels](https://medium.com/@Werner) did not disappoint.*
 
 ## Server Operations
 

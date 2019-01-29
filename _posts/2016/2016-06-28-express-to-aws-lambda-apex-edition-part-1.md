@@ -51,7 +51,7 @@ The next step is to install Apex. If you are on Windows, you will need to [downl
 
 After installing the tool, we are ready to create our project. To create the project we first need to export two environment variables *AWS_PROFILE *and *AWS_REGION*. After setting those variables, we can create the project with *apex init* command.
 
-![Create a new Apex project](https://cdn-images-1.medium.com/max/2152/1*-8mNIX5yRMlFOleFvwhpGQ.png)*Create a new Apex project*
+![Create a new Apex project](/static/medium/2152-1*-8mNIX5yRMlFOleFvwhpGQ.png)*Create a new Apex project*
 
 The init command creates a basic project structure and configures the required IAM roles and policies on AWS.
 
@@ -67,7 +67,7 @@ Apex has a very simple project structure. The **project.json** file contains the
 
 Since the the endpoint in our Express app is */foo* I updated the function name to *foo.* I then deployed the function and invoked the function to test that it works.
 
-![apex deploy and invoke](https://cdn-images-1.medium.com/max/2904/1*jH74dgVZ41cGQMDYErSxQA.png)*apex deploy and invoke*
+![apex deploy and invoke](/static/medium/2904-1*jH74dgVZ41cGQMDYErSxQA.png)*apex deploy and invoke*
 
 **Infrastructure**
 Rather than implementing commands to manage infrastructure, Apex has chosen to integrate with [Terraform](https://www.terraform.io/). Each environment or stage is defined in the infrastructure directory.
@@ -85,11 +85,11 @@ Once you have defined your [Terraform](https://www.terraform.io/) resources, you
 
 For this example I needed to create a HTTP endpoint at */foo/{id}*. I used Terraform to configure IAM Roles and an API Gateway endpoint at */foo/{id}*.
 
-![Running Terraform apply](https://cdn-images-1.medium.com/max/3572/1*8bel9oJwxmP1GVliIEzj-Q.png)*Running Terraform apply*
+![Running Terraform apply](/static/medium/3572-1*8bel9oJwxmP1GVliIEzj-Q.png)*Running Terraform apply*
 
 After deploying the API Gateway endpoint I was able to
 
-![Calling the API Gateway endpoint](https://cdn-images-1.medium.com/max/2244/1*JnLULLOzYLhpELzB73ix-Q.png)*Calling the API Gateway endpoint*
+![Calling the API Gateway endpoint](/static/medium/2244-1*JnLULLOzYLhpELzB73ix-Q.png)*Calling the API Gateway endpoint*
 
 ### What’s next?
 

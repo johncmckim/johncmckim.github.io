@@ -3,14 +3,14 @@ layout: blog
 category: blog
 title: "Slack Webhooks with the Serverless Framework"
 subtitle: Building a notifications system for my garden
-poster_img: https://cdn-images-1.medium.com/max/2000/1*0rvxfaQlafsRjqw_GV9__Q.png
+poster_img: static/medium/2000-1*0rvxfaQlafsRjqw_GV9__Q.png
 description: >
     I have been writing about a problem I have with my garden. I often forget to water
     my plants and I need a system to help. To help solve this problem I created a
     dashboard that allows me to track moisture levels...
 ---
 
-![](https://cdn-images-1.medium.com/max/2000/1*0rvxfaQlafsRjqw_GV9__Q.png)
+![](/static/medium/2000-1*0rvxfaQlafsRjqw_GV9__Q.png)
 
 # Slack Webhooks with the Serverless Framework
 
@@ -113,7 +113,7 @@ Different use cases will need different cloud services. Understanding how each c
 
 To test the notifications, I setup a node script to publish moisture levels to the AWS IoT hub.
 
-![](https://cdn-images-1.medium.com/max/2896/1*dooPhPpg1OH6ExpXc6wM1g.png)
+![](/static/medium/2896-1*dooPhPpg1OH6ExpXc6wM1g.png)
 
 I am happy with this as a starting point. But there is a lot more I want to do with Chat bots. I want to improve the Slack integration by adding support for incoming messages. I also want to explore NLP with [Wit](https://wit.ai/) and other platforms (Facebook Messenger).
 

@@ -92,7 +92,7 @@ The first step is to create a function with endpoint that publishes messages to 
 
 Once we’re publishing messages to SNS successfully, we need to create a new function that will receive SNS events. We use the same Serverless command as we have used before, but select **Create Event** instead of Create Endpoint.
 
-![](https://cdn-images-1.medium.com/max/2928/1*zk5Mnw4WtkY4tq3nndWUFw.png)
+![](/static/medium/2928-1*zk5Mnw4WtkY4tq3nndWUFw.png)
 
 Once we hace done this, we should see the following files added to our project.
 
@@ -152,17 +152,17 @@ SNS is **Push** event source for Lambda. Push event sources invoke Lambda functi
 
 To test our Express app we need to run both **index.js **and **worker.js**.
 
-![Express app during testing](https://cdn-images-1.medium.com/max/2000/1*jXFDRECHTqqGPl7bl1eh5A.png)*Express app during testing*
+![Express app during testing](/static/medium/2000-1*jXFDRECHTqqGPl7bl1eh5A.png)*Express app during testing*
 
-![Node worker during testing](https://cdn-images-1.medium.com/max/2000/1*BjR-qdkjYNv0s15seKmUuQ.png)*Node worker during testing*
+![Node worker during testing](/static/medium/2000-1*BjR-qdkjYNv0s15seKmUuQ.png)*Node worker during testing*
 
 We cannot simulate SNS locally so we need to test our Serverless project in AWS. To verify that the Lambda function has run correctly, we can check the CloudWatch logs for our Lambda function.
 
-![CloudWatch Logs from Jobs Lambda](https://cdn-images-1.medium.com/max/2812/1*0lVSKciCpp_6dU3nTdOtRg.png)*CloudWatch Logs from Jobs Lambda*
+![CloudWatch Logs from Jobs Lambda](/static/medium/2812-1*0lVSKciCpp_6dU3nTdOtRg.png)*CloudWatch Logs from Jobs Lambda*
 
-![CloudWatch logs from Worker Lambda](https://cdn-images-1.medium.com/max/3192/1*4MGP6akt3a4qBe7q5FZ20A.png)*CloudWatch logs from Worker Lambda*
+![CloudWatch logs from Worker Lambda](/static/medium/3192-1*4MGP6akt3a4qBe7q5FZ20A.png)*CloudWatch logs from Worker Lambda*
 
-![Console during testing](https://cdn-images-1.medium.com/max/2344/1*ATI0g0JzdvKehEhyRF82FA.png)*Console during testing*
+![Console during testing](/static/medium/2344-1*ATI0g0JzdvKehEhyRF82FA.png)*Console during testing*
 
 ### What’s next?
 

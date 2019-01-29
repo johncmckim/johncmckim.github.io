@@ -2,7 +2,7 @@
 layout: blog
 category: blog
 title: "My AWS Wishlist for 2017"
-poster_img: https://cdn-images-1.medium.com/max/5184/1*cGuojhsF_wDNnB73PbHAxQ.jpeg
+poster_img: static/medium/5184-1*cGuojhsF_wDNnB73PbHAxQ.jpeg
 description: >
     Amazon Web Services (AWS) is well known for listening to customer feedback.
     This has been evident in the features they have delivered for their Serverless platform...
@@ -12,7 +12,7 @@ description: >
 
 As a developer working on a 100% serverless application, I find myself wanting more so I can do with less
 
-![Wish upon a star —[ from unspash](https://unsplash.com/@vincentiu?photo=ln5drpv_ImI)](https://cdn-images-1.medium.com/max/5184/1*cGuojhsF_wDNnB73PbHAxQ.jpeg)*Wish upon a star —[ from unspash](https://unsplash.com/@vincentiu?photo=ln5drpv_ImI)*
+![Wish upon a star —[ from unspash](https://unsplash.com/@vincentiu?photo=ln5drpv_ImI)](/static/medium/5184-1*cGuojhsF_wDNnB73PbHAxQ.jpeg)*Wish upon a star —[ from unspash](https://unsplash.com/@vincentiu?photo=ln5drpv_ImI)*
 
 Amazon Web Services (AWS) is well known for listening to customer feedback. This has been evident in the features they have delivered for their Serverless platform.
 

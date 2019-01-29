@@ -3,7 +3,7 @@ layout: blog
 category: blog
 title: "Adopting Serverless — Outsourcing"
 subtitle: The effect of outsourcing to fully managed service providers
-poster_img: https://cdn-images-1.medium.com/max/6000/1*CfSUDWSeqbx9609nQkm7Fw.jpeg
+poster_img: static/medium/6000-1*CfSUDWSeqbx9609nQkm7Fw.jpeg
 description: >
     In my last article, I wrote about the Architectural and Securityissues you will
     face when going serverless. In this article, I want to explore the effect of
@@ -14,7 +14,7 @@ description: >
 
 The effect of outsourcing to fully managed service providers
 
-![“Have you tried rebooting your Serverless” — ([http://negativespace.co](http://negativespace.co/photos/notebook-stock-photo))](https://cdn-images-1.medium.com/max/6000/1*CfSUDWSeqbx9609nQkm7Fw.jpeg)*“Have you tried rebooting your Serverless” — ([http://negativespace.co](http://negativespace.co/photos/notebook-stock-photo))*
+![“Have you tried rebooting your Serverless” — ([http://negativespace.co](http://negativespace.co/photos/notebook-stock-photo))](/static/medium/6000-1*CfSUDWSeqbx9609nQkm7Fw.jpeg)*“Have you tried rebooting your Serverless” — ([http://negativespace.co](http://negativespace.co/photos/notebook-stock-photo))*
 
 In my last article, I wrote about the [Architectural and Security](https://read.acloud.guru/adopting-serverless-architectures-and-security-254a0c12b54a) issues you will face when going serverless. In this article, I want to explore the effect of outsourcing to fully managed service providers.
 
@@ -22,7 +22,7 @@ In my last article, I wrote about the [Architectural and Security](https://read.
 
 The core concept behind Serverless is outsourcing to service providers. Outsourcing services to providers is not a new concept in IT. You may already be outsourcing your data centre management to AWS or Azure.
 
-![Maybe not](https://cdn-images-1.medium.com/max/2000/1*fmHAHYsIlY0ezY4AZgUESw.jpeg)*Maybe not*
+![Maybe not](/static/medium/2000-1*fmHAHYsIlY0ezY4AZgUESw.jpeg)*Maybe not*
 
 Using a cloud provider is often viewed as a technical decision. But choosing to outsource at all should be a business decision. Before going outsourcing a service you should ask two questions.
 
@@ -76,7 +76,7 @@ Data is a valuable asset in every organisation. You are responsible for your dat
 
 Outsourcing to your provider means there are some problems you just cannot solve yourself. It might be as simple as a question you need answered or a critical issue with the service. When you have a problem with your provider, who ya gonna call?
 
-![“Ghostbusters” — [wikipedia](https://en.wikipedia.org/wiki/Ghostbusters_%28franchise%29)](https://cdn-images-1.medium.com/max/2000/1*oqGpk3iRi_LVcSjnIiJC7g.png)*“Ghostbusters” — [wikipedia](https://en.wikipedia.org/wiki/Ghostbusters_%28franchise%29)*
+![“Ghostbusters” — [wikipedia](https://en.wikipedia.org/wiki/Ghostbusters_%28franchise%29)](/static/medium/2000-1*oqGpk3iRi_LVcSjnIiJC7g.png)*“Ghostbusters” — [wikipedia](https://en.wikipedia.org/wiki/Ghostbusters_%28franchise%29)*
 
 If you have a critical issue, will your provider respond rapidly to assist you? What level of support will they provide? A quality support service is an important aspect of a fully managed service.
 
@@ -106,7 +106,7 @@ This is the last post in [this](https://read.acloud.guru/adopting-serverless-peo
 
 If you want to read more of my articles on Serverless, you can follow me on Medium or [Twitter](https://twitter.com/johncmckim).
 
-![](https://cdn-images-1.medium.com/max/2000/1*4SAJI2W8hInwwRCn7R8a6A.png)
+![](/static/medium/2000-1*4SAJI2W8hInwwRCn7R8a6A.png)
 
 ### A Cloud Guru
 

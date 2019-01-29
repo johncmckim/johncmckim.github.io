@@ -57,7 +57,7 @@ After installing the tool we’re ready to create a project. The [create command
 
 I used the -c argument to stop Serverless from deploying the CloudFormation template to AWS. If you want to deploy the project to AWS later you’ll need to run the [resources deploy](http://docs.serverless.com/docs/resources-deploy) command later.
 
-![serverless project create -c](https://cdn-images-1.medium.com/max/4776/1*iALKLWekWMsdppfk3r96tg.png)*serverless project create -c*
+![serverless project create -c](/static/medium/4776-1*iALKLWekWMsdppfk3r96tg.png)*serverless project create -c*
 
 Once this is command has finished you will have a project with the following structure:
 
@@ -78,7 +78,7 @@ The next step is to create a function. There are a few architectural choices you
 
 The create function will ask you to choose a runtime and if you want to create an [AWS API Gateway Endpoint](https://aws.amazon.com/api-gateway/), Event or Just the Function. For our example, we need to create an endpoint.
 
-![serverless function create](https://cdn-images-1.medium.com/max/3372/1*-bqpjVGnXtMj7vCKkzBedg.png)*serverless function create*
+![serverless function create](/static/medium/3372-1*-bqpjVGnXtMj7vCKkzBedg.png)*serverless function create*
 
 This will add the following files to your project.
 
@@ -146,9 +146,9 @@ The final step is to update the **s-function.json**. This file defines our API G
 
 To test the function locally we need to simulate API Gateway. A plugin called [Serverless Offline](https://github.com/dherault/serverless-offline) starts a web server that simulates API Gateway. Follow the instructions on [Github](https://github.com/dherault/serverless-offline) to install the plugin.
 
-![Serverless Offline console](https://cdn-images-1.medium.com/max/2228/1*Hg_NaC7K0uCAVTQx1jUIAQ.png)*Serverless Offline console*
+![Serverless Offline console](/static/medium/2228-1*Hg_NaC7K0uCAVTQx1jUIAQ.png)*Serverless Offline console*
 
-![Response in the Browser](https://cdn-images-1.medium.com/max/2072/1*o6DQHmytc8dfEaI9t_uxQw.png)*Response in the Browser*
+![Response in the Browser](/static/medium/2072-1*o6DQHmytc8dfEaI9t_uxQw.png)*Response in the Browser*
 
 ### What’s next?
 

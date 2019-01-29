@@ -3,7 +3,7 @@ layout: blog
 category: blog
 title: "AWS re:Invent 2016 — Wednesday’s Keynote"
 subtitle: A Summary of the Wednesday Keynote by Andy Jassy
-poster_img: https://cdn-images-1.medium.com/max/5000/1*AxWQs0IucWfpipxzjhMTCA.jpeg
+poster_img: static/medium/5000-1*AxWQs0IucWfpipxzjhMTCA.jpeg
 description: >
     After two big days of sessions and events at AWS re:Invent, Wednesday started with the
     first of two general keynotes. There was an air of excitement for the first round of
@@ -14,11 +14,11 @@ description: >
 
 A Summary of the Wednesday Keynote by Andy Jassy
 
-![](https://cdn-images-1.medium.com/max/5000/1*AxWQs0IucWfpipxzjhMTCA.jpeg)
+![](/static/medium/5000-1*AxWQs0IucWfpipxzjhMTCA.jpeg)
 
 After two big days of sessions and events at AWS re:Invent, Wednesday started with the first of two general keynotes. There was an air of excitement for the first round of announcements by AWS CEO, Andy Jassy. We saw a wide range of announcements for infrastructure and platform services.
 
-![](https://cdn-images-1.medium.com/max/2000/1*mnz7jdOLLQgTvoLborKr-A.jpeg)
+![](/static/medium/2000-1*mnz7jdOLLQgTvoLborKr-A.jpeg)
 
 ## Compute
 

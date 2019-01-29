@@ -3,7 +3,7 @@ layout: blog
 category: blog
 title: "My AWS re:Invent 2016 Serverless Wishlist"
 subtitle: The announcements I’m hoping to unwrap
-poster_img: https://cdn-images-1.medium.com/max/17664/1*3npkg_MuveHoIhOXFz4mjg.jpeg
+poster_img: static/medium/17664-1*3npkg_MuveHoIhOXFz4mjg.jpeg
 description: >
     AWS re:Invent is just around the corner. AWS re:Invent is the global conference for Amazon Web Services.
     I am lucky enough this year to be going with the A Cloud Guru team.
@@ -14,7 +14,7 @@ description: >
 
 The announcements I’m hoping to unwrap
 
-![](https://cdn-images-1.medium.com/max/17664/1*3npkg_MuveHoIhOXFz4mjg.jpeg)
+![](/static/medium/17664-1*3npkg_MuveHoIhOXFz4mjg.jpeg)
 
 AWS re:Invent is just around the corner. AWS re:Invent is the global conference for Amazon Web Services. I am lucky enough this year to be going with the [A Cloud Guru](https://acloud.guru) team. I am excited as this will be the first time I have attended.
 
@@ -104,7 +104,7 @@ A number of the lecturers will be in attendance including [Ryan Kroonenburg](htt
 
 If you want to meet me at re:Invent send me a tweet [@johncmckim](https://twitter.com/johncmckim). If you want to read more on Serverless don’t forget to follow me on Medium.
 
-![](https://cdn-images-1.medium.com/max/2000/1*4SAJI2W8hInwwRCn7R8a6A.png)
+![](/static/medium/2000-1*4SAJI2W8hInwwRCn7R8a6A.png)
 
 ### A Cloud Guru
 

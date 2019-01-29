@@ -3,7 +3,7 @@ layout: blog
 category: blog
 title: "Adopting Serverless — People and DevOps"
 subtitle: The first thing you should consider when adopting serverless is your people
-poster_img: https://cdn-images-1.medium.com/max/3840/1*qIFXKFyIkca-C52vK5eaig.jpeg
+poster_img: static/medium/3840-1*qIFXKFyIkca-C52vK5eaig.jpeg
 description: >
     Serverless Architectures are an emerging trend in cloud computing. If you have been to an AWS summit or developer day this year (2016), Serverless has been a major theme. AWS is not the only provider pushing serverless...
 ---
@@ -12,7 +12,7 @@ description: >
 
 The first thing you should consider when adopting serverless is your people
 
-![Freedom: “Going Serverless”](https://cdn-images-1.medium.com/max/3840/1*qIFXKFyIkca-C52vK5eaig.jpeg)*Freedom: “Going Serverless”*
+![Freedom: “Going Serverless”](/static/medium/3840-1*qIFXKFyIkca-C52vK5eaig.jpeg)*Freedom: “Going Serverless”*
 
 Serverless Architectures are an emerging trend in cloud computing. If you have been to an AWS summit or developer day this year (2016), Serverless has been a major theme. AWS is not the only provider pushing serverless. Azure, Google, IBM and WebTask are all pushing hard to develop their Serverless services.
 
@@ -84,7 +84,7 @@ For FaaS services capturing and storing logs becomes the responsibility of the p
 
 What these services do not provide is a way to correlate logs end-to-end. If I have a service that looks like this:
 
-![Notifications Service from my Garden Project](https://cdn-images-1.medium.com/max/2000/1*bXkwsZ2CiNyerGZ1FOMH5g.png)*Notifications Service from my Garden Project*
+![Notifications Service from my Garden Project](/static/medium/2000-1*bXkwsZ2CiNyerGZ1FOMH5g.png)*Notifications Service from my Garden Project*
 
 To diagnose a failure, I need to correlate the execution logs for both of those Lambdas. This can be difficult (or impossible) to do manually.
 
@@ -96,7 +96,7 @@ DevOps and People are not the only factors to consider when going Serverless. My
 
 If you want to read more on Serverless follow me on Medium or [Twitter](https://twitter.com/johncmckim).
 
-![](https://cdn-images-1.medium.com/max/2000/1*4SAJI2W8hInwwRCn7R8a6A.png)
+![](/static/medium/2000-1*4SAJI2W8hInwwRCn7R8a6A.png)
 
 ### A Cloud Guru
 

@@ -183,11 +183,11 @@ In [Part 2](https://medium.com/@johncmckim/express-to-aws-lambda-part-2-f5183389
 
 I started the Express app and Serverless app before running the test suite.
 
-![Express console during testing](https://cdn-images-1.medium.com/max/2088/1*DKZkMgHBzrQKfc856G_Fgw.png)*Express console during testing*
+![Express console during testing](/static/medium/2088-1*DKZkMgHBzrQKfc856G_Fgw.png)*Express console during testing*
 
-![Serverless console during testing](https://cdn-images-1.medium.com/max/2880/1*57-NIPaojDsSHWDu6dEZ0w.png)*Serverless console during testing*
+![Serverless console during testing](/static/medium/2880-1*57-NIPaojDsSHWDu6dEZ0w.png)*Serverless console during testing*
 
-![Test results](https://cdn-images-1.medium.com/max/2716/1*PucbkjLvmqm8T7ukWKmUIQ.png)*Test results*
+![Test results](/static/medium/2716-1*PucbkjLvmqm8T7ukWKmUIQ.png)*Test results*
 
 ### What’s next?
 
