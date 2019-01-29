@@ -1,4 +1,6 @@
 # Site settings
+paginate: 8
+paginate_path: "/blog/:num/"
 
 title: John McKim
 email: contact@johncmckim.me
@@ -9,14 +11,14 @@ author:
 
 job:
   prefix: the
-  title: Head of Development
+  title: VP of Product & Technology
 
 employer:
   name: A Cloud Guru
   uri: https://acloud.guru
 
 description: >
-  Head of Development at A Cloud Guru, occasional writer, cyclist, terrible gardener.
+  VP of Product & Technology at A Cloud Guru, Serverless enthusiast, writer, home cook and terrible gardener.
 
 baseurl: ""
 url: "https://johncmckim.me"
@@ -27,8 +29,8 @@ feed:
 blog_url:               https://medium.com/@johncmckim
 medium_username:        "@johncmckim"
 twitter_username:       johncmckim
-github_username:        johncmckim
-stackoverflow_username: 937577/john-mckim
+# github_username:        johncmckim
+# stackoverflow_username: 937577/john-mckim
 linkedin_username:      johncmckim
 #google_plus_username
 #facebook_username:    johncmckim
@@ -39,5 +41,6 @@ markdown: kramdown
 sass:
   style: compressed
 
-gems:
+plugins:
   - jekyll-feed
+  - jekyll-paginate

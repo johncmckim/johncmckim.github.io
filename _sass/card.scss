@@ -1,0 +1,47 @@
+
+.card {
+    width: 80%;
+    margin: 1.6rem auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-color: $card-bg-color;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+    .card-info {
+      font-family: $headings-font-family;
+      overflow: hidden;
+
+      .card-posterimg {
+        height: 260px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-clip: border-box;
+        background-size: cover;
+      }
+
+      .card-title {
+        max-width: 500px;
+        color: $card-h-color;
+        font-size: 22px;
+        margin-bottom: 3px;
+        word-break: break-word;
+      }
+      .card-subtitle {
+        color: $card-hsub-color;
+        font-size: 20px;
+      }
+
+      .card-date {
+        color: $card-hsub-color;
+        font-size: 14px;
+        margin-top: 15px;
+      }
+    }
+
+    .card-description {
+      font-size: 18px;
+      line-height: 1.6rem;
+      max-width: 700px;
+    }
+  }

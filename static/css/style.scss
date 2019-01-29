@@ -4,10 +4,17 @@
 ---
 @import "vars";
 @import "mixins";
+
+@import "grid";
 @import "common";
 @import "layout";
-@import "nav";
-@import "home";
-@import "presentation";
+@import "profile";
+@import "header";
+@import "card";
 @import "social";
+
+@import "home";
+@import "blog";
+@import "presentation";
+
 @import "font-awesome/scss/font-awesome"

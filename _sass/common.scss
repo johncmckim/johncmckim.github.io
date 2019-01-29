@@ -1,20 +1,10 @@
-.text-muted {
-  color: $color-grey;
-}
-
-.container .text-muted {
-  margin: 20px 0;
-}
-.container a {
-  color: $theme-color;
-}
-.container a:hover {
-  color: $theme-color-darker;
-}
 
 h1, h2, h3 ,h4 ,h5 ,h6 {
+  font-family: $headings-font-family;
   font-weight: 500;
   line-height: 1.1;
+  margin-top: 20px;
+  margin-bottom: 10px;
 
   small {
     font-weight: 400;
@@ -24,26 +14,48 @@ h1, h2, h3 ,h4 ,h5 ,h6 {
 }
 
 h1, h2, h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-
   small {
     font-size: 65%
   }
 }
 
 h4, h5, h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-
   small {
 		font-size: 75%;
   }
 }
 
-h1 { font-size: 36px }
-h2 { font-size: 30px }
-h3 { font-size: 24px }
-h4 { font-size: 18px }
+h1 { font-size: 34px }
+h2 { font-size: 28px }
+h3 { font-size: 22px }
+h4 { font-size: 16px }
 h5 { font-size: 14px }
 h6 { font-size: 12px }
+
+h1 + h2, h1 + h3 {
+  margin-top: 10px;
+}
+
+.pagination {
+  font-family: $headings-font-family;
+  font-size: 20px;
+  text-align: center;
+
+  span, a {
+    margin-right: 8px;
+  }
+
+  span {
+    color: $pagination-active-color;
+    border-bottom: 1px solid $pagination-active-color;
+    cursor: default;
+  }
+
+  a {
+    color: $pagination-link-color;
+    border-bottom: 1px solid #FFF;
+    :hover {
+      text-decoration: underline;
+    }
+  }
+}

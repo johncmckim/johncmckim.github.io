@@ -1,0 +1,61 @@
+
+$desktop-height: 210px;
+
+.profile {
+    margin-bottom: 40px;
+
+    .profile-info {
+        $info-height: 140px;
+
+        margin-top: $desktop-height - $info-height;
+        height: $info-height;
+        max-width: 500px;
+
+        h1 {
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: -1.5px;
+        }
+
+        p {
+            font-family: $headings-font-family;
+            font-size: 18px;
+            margin: 0px;
+        }
+
+        .social {
+            padding-top: 5px;
+            word-spacing: 15px;
+
+            h4 > a {
+            font-size: 18px;
+            }
+        }
+    }
+
+    .profile-avatar {
+        text-align: right;
+
+        img {
+            $img-size: 160px;
+
+            height: $img-size;
+            width: $img-size;
+            margin-top: $desktop-height - $img-size;
+            margin-right: 10px;
+
+            border-radius: 5px;
+            vertical-align: middle;
+        }
+    }
+
+}
+
+.about {
+    padding-bottom: 1rem;
+    
+    p {
+        font-family: $headings-font-family;
+        font-size: 16px;
+    }
+}

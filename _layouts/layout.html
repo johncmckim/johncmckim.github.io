@@ -17,10 +17,10 @@
   </head>
   <body>
   {% include analytics.html %}
-  {% if page.header != 'hidden' %}
-  {% include header.html %}
+  {% if page.nav != 'hidden' %}
+  {% include nav.html %}
   {% endif %}
-  <div id="wrap">
+  <div>
     {{ content }}
   </div>
   {% include footer.html %}
